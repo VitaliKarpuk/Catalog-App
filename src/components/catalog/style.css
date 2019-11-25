@@ -150,7 +150,7 @@
     overflow: hidden;
 }
 .info_car div:first-child{
-    width: 10%;
+    width: 20%;
 }
 .info_car div p:last-child{
     height: 50%;
