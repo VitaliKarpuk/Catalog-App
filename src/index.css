@@ -29,3 +29,6 @@ code {
 #root > div{
   width: 100%;
 }
+#okta-sign-in.auth-container.main-container {
+  margin-top: 2%;
+}

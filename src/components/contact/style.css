@@ -14,12 +14,18 @@
     background-color: #c2c0c0;
 }
 .listFaq_0, .listFaq_1, .listFaq_2, .listFaq_3, .listFaq_4, .listFaq_5, .listFaq_6, .listFaq_7, .listFaq_8, .listFaq_9{
-    display: none;
+    position: absolute;
+    left: -99999em;
+    opacity: 0;
+}
+.faqLi_0:hover .listFaq_0,.faqLi_1:hover .listFaq_1,.faqLi_2:hover .listFaq_2,.faqLi_3:hover .listFaq_3,
+.faqLi_4:hover .listFaq_4,.faqLi_5:hover .listFaq_5,.faqLi_6:hover .listFaq_6,.faqLi_7:hover .listFaq_7,
+.faqLi_8:hover .listFaq_8,.faqLi_9:hover .listFaq_9 {
+    position: relative;
+    opacity: 1;
+    transition: 0.5s opacity;
+    left: 0;
+    background-color: #e2e2e2;
+    margin-top: 1%;
 }
 
-.answerFaq_0{
-    display: flex;
-}
-.answerFaq_1{
-    display: flex;
-}

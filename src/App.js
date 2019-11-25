@@ -2,7 +2,6 @@ import React from 'react';
 import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
 import { Header } from './components/header/header'
 import Content  from './components/content/content'
-import { Footer } from './components/footer/footer'
 import './App.css';
 import { Route } from 'react-router-dom'
 import Catalog from './components/catalog/catalog'
@@ -41,10 +40,6 @@ export const App = () => {
       </div>
       <Route path="/implicit/callback" component={ImplicitCallback} />
     </Security>
-      
-      
-      <Footer />
-
     </>
   )
 }
