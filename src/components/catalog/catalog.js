@@ -24,8 +24,8 @@ const Catalog = (props) => {
                     </div>
                 </div>
                 <ul>
-                    { listCar.map((elem) =>{
-                        return <li>
+                    { listCar.map((elem, index) =>{
+                        return <li key = {index}>
                                     <img src = {require (`../../img/${elem.img[0]}`)}  width = '100%' height = '100%' alt = 'car'/>
                                     <div className = 'info_car'>
                                         <div className = 'info_car__price'>

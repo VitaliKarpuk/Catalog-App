@@ -1,16 +1,11 @@
 import React, { Component } from 'react'
 import { withAuth } from '@okta/okta-react';
-
 export default withAuth(class PageRegistration extends Component {
     state = {
         authenticated: null,
         currentUserName: '',
         currentUserEmale: ''
     }
-    
-    
-   
-
   checkAuthentication = async() => {
     const authenticated = await this.props.auth.isAuthenticated();
     if (authenticated !== this.state.authenticated) {
@@ -60,4 +55,5 @@ export default withAuth(class PageRegistration extends Component {
         </div>
     );
   }
-});
+}
+);

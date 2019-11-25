@@ -48,34 +48,34 @@ const SearchByParameters = (props) => {
                 <h5>ПАРАМЕТРЫ АВТО</h5>
                 <form>
                 <select  id = 'select_mark' onChange = {onChooseMark}>
-                    {mark.map( elem => <option>{elem}</option>)}
+                    {mark.map( (elem, index) => <option key = {index}>{elem}</option>)}
                 </select>
                 <select id = 'select_model' onChange = {(e) => e.target.value !== 'Модель' ? searchCarModel(e.target.value) : undefined }>
                     <option>Модель</option>
-                    {listCar.map( elem => <option>{elem.model}</option>)}
+                    {listCar.map((elem, index) => <option key = {index}>{elem.model}</option>)}
                 </select>
                 <div>
                 <h6>Год выпуска</h6>
                 <select id = 'select_yearStart' onChange = { (e) => searchCarYearStart(e.target.value)}>
-                    {yearBirth.map(elem => <option>{elem}</option>)}
+                    {yearBirth.map((elem, index) => <option key = {index}>{elem}</option>)}
                 </select>
                 <select id = 'select_yearEnd' onChange = { (e) => searchCarYearEnd(e.target.value)}>
-                    {yearBirth.reverse().map(elem => <option>{elem}</option>)}
+                    {yearBirth.reverse().map((elem, index) => <option key = {index}>{elem}</option>)}
                 </select>
                 </div>
                 <div>
                 <h6>Цена, USD</h6>
                 <select id = 'select_priceStart' onChange = { (e) => searchCarPriceStart(e.target.value)}>
-                    { price.map( elem => <option>{elem}</option>)}
+                    { price.map( (elem, index) => <option key = {index}>{elem}</option>)}
                 </select>
                 <select id = 'select_priceEnd' onChange = { (e) => searchCarPriceEnd(e.target.value)}>
-                    { price.map( elem => <option>{elem}</option>)}
+                    { price.map( (elem, index) => <option key = {index}>{elem}</option>)}
                 </select>
                 </div>
                 <select id = 'select_bodyCar' onChange = { (e) => {
                     returnState()
                     searchCarBody(e.target.value.toLowerCase())}}>
-                    { body.map( elem => <option>{elem}</option>)}
+                    { body.map( (elem, index) => <option key = {index}>{elem}</option>)}
                 </select>
                 <div>
                     <button value = 'бензин' onClick = {

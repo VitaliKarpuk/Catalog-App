@@ -1,7 +1,6 @@
-import React, { useState} from 'react' 
+import React from 'react' 
 import './style.css'
 export const Contact = () => {
-    const [ classNameDiv, setClassNameDiv ] = useState('listFaq')
     const faq = [{
         question: 'При наличии клубной карточки TOP SECRET или TROLL, могу ли я получить скидку в интернет-магазине?',
         answer: 'Скидки по клубной карточке TOP SECRET и TROLL можно получить исключительно при покупках в стационарных магазинах предъявляя продавцу клубную карточку.'
@@ -42,13 +41,10 @@ export const Contact = () => {
         answer: 'Заплатить за товар, купленный в интернет-магазине, Вы можете наличными денежными средствами или банковской картой.'
     }
      ]
-    const onClickLi = ({target : {className}}) => {
-        setClassNameDiv ('answerFaq')
-    }
     return(
         <ul className = 'faq'>
             {faq.map((item, index) => <li className = {`faqLi_${index}`} >{item.question}
-            <div className = {`${classNameDiv}_${index}`}>{item.answer}</div>
+            <div className = {`listFaq_${index}`}>{item.answer}</div>
             </li>)}
         </ul>
     )

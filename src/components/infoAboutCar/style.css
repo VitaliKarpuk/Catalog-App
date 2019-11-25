@@ -55,3 +55,14 @@
     border-top: 1px solid #ececec;
     padding-top: 2%;
 }
+.info_car_options button{
+    background-color: royalblue;
+    border: none;
+    color: #ffffff;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.info_car_options button:hover{
+    background-color: rgb(106, 136, 228);
+}
