@@ -159,7 +159,7 @@
     white-space: nowrap;
     overflow: hidden;
 }
-@media  (max-width: 800px) {
+@media  (max-width: 992px) {
     .result_search ul li img{
         height: 75%;
         width: 22%;
@@ -172,3 +172,28 @@
         width: 65% !important;
     }
 }
+@media  (min-width: 1750px) {
+    .result_search ul li img{
+        height: 90%;
+        width: 22%;
+        margin-right: 2%;
+    }
+}
+@media  (min-width: 1950px) {
+    .result_search ul li img{
+        height: 60%;
+        width: 32%;
+    }
+}
+@media (max-width: 720px) {
+    .result_search ul li img{
+        height: 100%;
+        width: 12%;
+    }
+  }
+  @media (max-width: 370px) {
+    .result_search ul li img{
+        height: 100%;
+        width: 5%;
+    }
+  }
