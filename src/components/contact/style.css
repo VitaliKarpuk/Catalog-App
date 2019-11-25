@@ -1,0 +1,25 @@
+.faq{
+    margin-top: 2%;
+    list-style: none;
+}
+.faq li {
+    width: 70%;
+    background-color: #f5f5f5;
+    margin-bottom: 1%;
+    padding: 1%;
+    border: 1px solid #ddd;
+}
+.faq li:hover{
+    cursor: pointer;
+    background-color: #c2c0c0;
+}
+.listFaq_0, .listFaq_1, .listFaq_2, .listFaq_3, .listFaq_4, .listFaq_5, .listFaq_6, .listFaq_7, .listFaq_8, .listFaq_9{
+    display: none;
+}
+
+.answerFaq_0{
+    display: flex;
+}
+.answerFaq_1{
+    display: flex;
+}

@@ -1,0 +1,28 @@
+.content{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    z-index: 2;
+}
+
+.carousel-inner img{
+    max-width:100% !important;
+    display:block;
+}
+.carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+.carousel-inner {
+    width: 80%;
+}
+.carousel-control-prev {
+    left: 8%;
+}
+.carousel-control-next {
+    right: 8%;
+}

@@ -1,0 +1,161 @@
+.catalog_list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #ffffff;
+    margin-top: 1vh;
+}
+.options_car{
+    width: 20%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+.options_car form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.options_car form > div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.options_car form > div h6{
+    width: 100%;
+    text-align: center;
+}
+.options_car form select{
+    width: 90%;
+    margin-bottom: 4%;
+    padding: 1%;
+    border-radius: 5px;
+    color: rgb(134, 134, 134);
+}
+.options_car form select:hover{
+    cursor: pointer;
+}
+.options_car form > button{
+    background-color: rgb(49, 49, 129);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    height: 5vh;
+}
+#select_yearStart{
+    margin-right: 4%;
+}
+#select_yearStart, #select_yearEnd{
+    width: 43%;
+
+}
+.options_car form > div button{
+    width: 45%;
+    padding: 0;
+    border: 1px solid rgb(189, 189, 189);;
+    color: #000;
+    margin-bottom: 4%;
+    background-color: rgb(243, 241, 241);
+}
+.options_car form > div button:hover{
+    background-color: rgb(206, 206, 206);
+    cursor: pointer;
+}
+.options_car form > div button:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+}
+
+.options_car form > div button:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+   
+}
+.result_search{
+    width: 80%;
+}
+.result_search > div{
+    width: 90%;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+}
+.result_search > div p {
+    margin: 0;
+}
+.result_search > div > div{
+    width: 50%;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.result_search  button{
+    width: 48%;
+    padding: 0;
+    border: 1px solid rgb(189, 189, 189);
+    color: #000;
+    background-color: rgb(243, 241, 241);
+    border-radius: 10px;
+}
+.result_search  button:hover{
+    cursor: pointer;
+    background-color: rgb(189, 189, 189);
+}
+.result_search ul{
+    width: 100%;
+    border-right: 1px solid #ececec;
+    margin-top: 2%;
+}
+.result_search ul a{
+    color: #1a60ba;
+    font-weight: 2px;
+}
+.result_search ul a:hover{
+    text-decoration: none;
+    color: rgb(187, 57, 57);
+}
+.result_search ul li{
+    width: 100%;
+    height: 27vh;
+    display: flex;
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    padding: 2% 2%;
+}
+.result_search ul li:last-child{
+    border-bottom: 1px solid #ececec;
+}
+.result_search ul li img{
+    height: 100%;
+    width: 20%;
+    margin-right: 2%;
+}
+.info_car{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 75%;
+}
+.info_car div:last-child {
+    width: 85%;
+    overflow: hidden;
+}
+.info_car div:first-child{
+    width: 10%;
+}
+.info_car div p:last-child{
+    height: 50%;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
