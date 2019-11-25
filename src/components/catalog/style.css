@@ -159,3 +159,16 @@
     white-space: nowrap;
     overflow: hidden;
 }
+@media  (max-width: 800px) {
+    .result_search ul li img{
+        height: 75%;
+        width: 22%;
+        margin-right: 2%;
+    }
+    #root > div {
+        width: 95% !important;
+    }
+    .menu_catalog {
+        width: 65% !important;
+    }
+}
