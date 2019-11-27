@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import './style.css'
 const InfoAboutCar = (props) => {
     const { listCar } = props
+    const [ valueButton, setValueButton ] = useState('Добавить в корзину')
+    
+    const arr = []
+    let arrCarInBasket = []
+    console.log(listCar[0].model)
+    const addInBasket = () => {
+        localStorage.setItem(`${listCar[0].model}`, JSON.stringify(listCar[0]))
+        
+        setValueButton('Перейти в карзину')
+        
+    }
+
     return(
         <div className = 'info_about__car'>
             <h5>{listCar[0].mark.toUpperCase()} {listCar[0].model}, {listCar[0].year}<span>{listCar[0].price} $</span></h5>
@@ -18,7 +31,9 @@ const InfoAboutCar = (props) => {
                     <li><span>Привод:</span> {listCar[0].drive_unit.toLowerCase()}</li>
                     <li><span>Стоимость:</span> {listCar[0].price} $</li>
                 </ul>
-                <button>Добавить в корзину</button>
+                {valueButton === 'Перейти в карзину' ? <Link to = '/registration'>
+                <button onClick = {addInBasket}>{valueButton}</button>
+                </Link> : <button onClick = {addInBasket}>{valueButton}</button>}
             </div>
             <div>
                 <div id="carouselExampleIndicators" className="carousel slide carousel_info" data-ride="carousel">

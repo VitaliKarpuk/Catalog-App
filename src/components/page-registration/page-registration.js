@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Orders} from '../Orders/Orders'
 import { withAuth } from '@okta/okta-react';
 export default withAuth(class PageRegistration extends Component {
     state = {
@@ -52,6 +53,7 @@ export default withAuth(class PageRegistration extends Component {
             <h1>Welcome {currentUserName}</h1>
             <p>Email: {currentUserEmale}</p>
             {mainContent}
+            <Orders />
         </div>
     );
   }
