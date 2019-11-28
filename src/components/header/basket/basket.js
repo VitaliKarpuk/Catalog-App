@@ -7,7 +7,7 @@ class Basket extends Component  {
         <div className = 'header_basket'>
             <Link to = '/registration'>
                 <i className="fa fa-user fa-2x" aria-hidden="true"></i>
-                {Object.keys(idToken).length === 0 ? <p>Войти</p>: idToken.idToken.claims.name} 
+                {/* {Object.keys(idToken).length === 0 ? <p>Войти</p>: idToken.idToken.claims.name}  */}
             </Link>
         </div>
     )
