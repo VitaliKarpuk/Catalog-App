@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Catalog-App/static/css/main.9ecb31d9.chunk.css",
-    "main.js": "/Catalog-App/static/js/main.79f0534e.chunk.js",
-    "main.js.map": "/Catalog-App/static/js/main.79f0534e.chunk.js.map",
+    "main.js": "/Catalog-App/static/js/main.70db285c.chunk.js",
+    "main.js.map": "/Catalog-App/static/js/main.70db285c.chunk.js.map",
     "runtime-main.js": "/Catalog-App/static/js/runtime-main.81e5ccf8.js",
     "runtime-main.js.map": "/Catalog-App/static/js/runtime-main.81e5ccf8.js.map",
     "static/css/2.cc82a8ae.chunk.css": "/Catalog-App/static/css/2.cc82a8ae.chunk.css",
-    "static/js/2.93577643.chunk.js": "/Catalog-App/static/js/2.93577643.chunk.js",
-    "static/js/2.93577643.chunk.js.map": "/Catalog-App/static/js/2.93577643.chunk.js.map",
+    "static/js/2.f61b0ec5.chunk.js": "/Catalog-App/static/js/2.f61b0ec5.chunk.js",
+    "static/js/2.f61b0ec5.chunk.js.map": "/Catalog-App/static/js/2.f61b0ec5.chunk.js.map",
     "index.html": "/Catalog-App/index.html",
-    "precache-manifest.017b712a8eb2c36a69408073f26ab4d0.js": "/Catalog-App/precache-manifest.017b712a8eb2c36a69408073f26ab4d0.js",
+    "precache-manifest.929e9e49b6445d8a16f5302b00152f3e.js": "/Catalog-App/precache-manifest.929e9e49b6445d8a16f5302b00152f3e.js",
     "service-worker.js": "/Catalog-App/service-worker.js",
     "static/css/2.cc82a8ae.chunk.css.map": "/Catalog-App/static/css/2.cc82a8ae.chunk.css.map",
     "static/css/main.9ecb31d9.chunk.css.map": "/Catalog-App/static/css/main.9ecb31d9.chunk.css.map",
@@ -59,8 +59,8 @@
   "entrypoints": [
     "static/js/runtime-main.81e5ccf8.js",
     "static/css/2.cc82a8ae.chunk.css",
-    "static/js/2.93577643.chunk.js",
+    "static/js/2.f61b0ec5.chunk.js",
     "static/css/main.9ecb31d9.chunk.css",
-    "static/js/main.79f0534e.chunk.js"
+    "static/js/main.70db285c.chunk.js"
   ]
 }
