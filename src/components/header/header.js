@@ -15,7 +15,7 @@ export const Header = () => {
                 </Link>
                 <Search />
                 <PersonalArea />
-                {/* <Basket /> */}
+                <Basket /> 
             </div>
         </div>
         <NavMenu />
