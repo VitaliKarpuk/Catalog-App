@@ -24,12 +24,12 @@ export const App = () => {
           onAuthRequired={onAuthRequired}
         >
       <Header />
-      <Route exact path = '/' component = { Content } />
+      {/* <Route exact path = '/' component = { Content } />
       <Route exact path = '/catalog' component = { Catalog } />
       <Route path = '/services' component = { Services } />
       <Route path = '/about' component = { AboutUs } />
       <Route path = '/contact' component = { Contact } />
-      <SecureRoute path = '/registration' component = {PageRegistration} />
+      <SecureRoute path = '/registration' component = {PageRegistration} /> */}
       <div>
       <Route
           path="/login"
