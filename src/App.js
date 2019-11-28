@@ -17,15 +17,19 @@ export const App = () => {
   }
   return (
     <>
-    <Security
+    {/* <Security
           issuer="https://dev-329898.okta.com/oauth2/default"
           client_id="0oa1xk7f0272QnTqH357"
           redirect_uri={window.location.origin + '/implicit/callback'}
           onAuthRequired={onAuthRequired}
         >
       <Header />
-
- */}
+      <Route exact path = '/' component = { Content } />
+      <Route exact path = '/catalog' component = { Catalog } />
+      <Route path = '/services' component = { Services } />
+      <Route path = '/about' component = { AboutUs } />
+      <Route path = '/contact' component = { Contact } />
+      <SecureRoute path = '/registration' component = {PageRegistration} />
       <div>
       <Route
           path="/login"
@@ -35,7 +39,8 @@ export const App = () => {
       />
       </div>
       <Route path="/implicit/callback" component={ImplicitCallback} />
-    </Security>
+    </Security> */}
+    <AboutUs />
     </>
   )
 }
