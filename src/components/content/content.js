@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Slider } from './slider/slider'
+import { Sliders } from './slider/slider'
 import { ContentInfo } from './content-info/content-info'
 import './style.css'
 
@@ -13,7 +13,7 @@ export default class Content extends Component {
 
     return (
       <div className = 'content'>
-      <Slider />
+      <Sliders />
       <ContentInfo />
         </div>
     );

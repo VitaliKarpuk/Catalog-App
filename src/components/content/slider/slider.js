@@ -1,29 +1,32 @@
 import React from 'react'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import car from '../../../img/car6.jpg'
 import car2 from '../../../img/car4.jpg'
 import car3 from '../../../img/car5.jpeg'
-export const Slider = () => {
+
+export const Sliders = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true
+  };
     return(
-        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src = {car} className="d-block w-100" height = '100%' alt="..." />
-          </div>
-          <div className="carousel-item">
-            <img src={car2} className="d-block w-100" alt="..." />
-          </div>
-          <div className="carousel-item">
-            <img src={car3} className="d-block w-100" alt="..."/>
-          </div>
+      <Slider {...settings}>
+        <div>
+          <img src = {car} alt = 'Car' />
         </div>
-        <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="sr-only">Previous</span>
-        </a>
-        <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="sr-only">Next</span>
-        </a>
-      </div>
+        <div>
+          <img src = {car2} alt = 'Car' />
+        </div>
+        <div>
+          <img src = {car3} alt = 'Car' />
+        </div>
+      </Slider>
     )
 }

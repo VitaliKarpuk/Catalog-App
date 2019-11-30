@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 1%;
+    margin-top: 3%;
 }
 .content_info li {
     width: 30%;

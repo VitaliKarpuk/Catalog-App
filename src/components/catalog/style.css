@@ -138,6 +138,7 @@
     height: 100%;
     width: 20%;
     margin-right: 2%;
+    object-fit: cover;
 }
 .info_car{
     display: flex;

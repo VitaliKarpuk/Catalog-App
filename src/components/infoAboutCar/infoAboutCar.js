@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import './style.css'
 const InfoAboutCar = (props) => {
     const { listCar } = props
     const [ valueButton, setValueButton ] = useState('Добавить в корзину')
-    
-    const arr = []
-    let arrCarInBasket = []
     console.log(listCar[0].model)
     const addInBasket = () => {
         localStorage.setItem(`${listCar[0].model}`, JSON.stringify(listCar[0]))
@@ -15,7 +15,15 @@ const InfoAboutCar = (props) => {
         setValueButton('Перейти в карзину')
         
     }
-
+    const settings = {
+        dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      pauseOnHover: true
+      };
     return(
         <div className = 'info_about__car'>
             <h5>{listCar[0].mark.toUpperCase()} {listCar[0].model}, {listCar[0].year}<span>{listCar[0].price} $</span></h5>
@@ -36,32 +44,17 @@ const InfoAboutCar = (props) => {
                 </Link> : <button onClick = {addInBasket}>{valueButton}</button>}
             </div>
             <div>
-                <div id="carouselExampleIndicators" className="carousel slide carousel_info" data-ride="carousel">
-                    <ol className="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img src= {require(`../../img/${listCar[0].img[0]}`)}  className="d-block w-100" alt="..."/>
-                        </div>
-                        <div className="carousel-item">
-                            <img src= {require(`../../img/${listCar[0].img[1]}`)}  className="d-block w-100" alt="..."/>
-                        </div>
-                        <div className="carousel-item">
-                            <img src= {require(`../../img/${listCar[0].img[2]}`)}  className="d-block w-100" alt="..."/>
-                        </div>
-                    </div>
-                    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Previous</span>
-                    </a>
-                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Next</span>
-                    </a>
-                </div>
+            <Slider {...settings}>
+        <div>
+        <img src= {require(`../../img/${listCar[0].img[0]}`)}  className="d-block w-100" alt="..."/>
+        </div>
+        <div>
+            <img src= {require(`../../img/${listCar[0].img[1]}`)}  className="d-block w-100" alt="..."/>
+        </div>
+        <div>
+            <img src= {require(`../../img/${listCar[0].img[2]}`)}  className="d-block w-100" alt="..."/>
+        </div>
+      </Slider>
                 <p>{listCar[0].keywords}</p>
                 <div>
                     <h6>Дополнительные опции:</h6>
