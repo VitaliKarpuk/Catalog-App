@@ -40,7 +40,7 @@ export const App = () => {
       </div>
       <Route path="/implicit/callback" component={ImplicitCallback} />
     </Security> */}
-    <Header />
+    <AboutUs />
     </>
   )
 }
