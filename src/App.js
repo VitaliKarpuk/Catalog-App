@@ -17,7 +17,7 @@ export const App = () => {
   }
   return (
     <>
-    <Security
+    {/* <Security
           issuer="https://dev-329898.okta.com/oauth2/default"
           client_id="0oa1xk7f0272QnTqH357"
           redirect_uri={window.location.origin + '/implicit/callback'}
@@ -39,7 +39,8 @@ export const App = () => {
       />
       </div>
       <Route path="/implicit/callback" component={ImplicitCallback} />
-    </Security>
+    </Security> */}
+    <Header />
     </>
   )
 }
