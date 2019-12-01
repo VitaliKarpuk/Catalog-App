@@ -1,61 +1,41 @@
 import React, { Component } from 'react'
-import { Orders} from '../Orders/Orders'
-import { withAuth } from '@okta/okta-react';
-export default withAuth(class PageRegistration extends Component {
-    state = {
-        authenticated: null,
-        currentUserName: '',
-        currentUserEmale: ''
-    }
-  checkAuthentication = async() => {
-    const authenticated = await this.props.auth.isAuthenticated();
-    if (authenticated !== this.state.authenticated) {
-      this.setState({ authenticated });
-    }
+import './style.css'
+
+export default class PageRegistration extends Component {
+  state = {
+    arrCar: []
   }
-  componentDidMount(){
-    const idToken = JSON.parse(localStorage.getItem('okta-token-storage'))
+  componentDidMount() {
+    const car = localStorage.getItem('car')
     this.setState({
-        currentUserEmale: idToken.idToken.claims.email,
-        currentUserName: idToken.idToken.claims.name
+      arrCar: JSON.parse(car)
     })
-    this.checkAuthentication();
-    
-}
 
-
-  async componentDidUpdate() {
-    this.checkAuthentication();
   }
-
-  login = async() => {
-    this.props.auth.login('/');
-  }
-
-  logout = async() => {
-    this.props.auth.logout('/');
-  }
-
+  
   render() {
-    const { currentUserEmale, currentUserName } = this.state
-        if (this.state.authenticated === null) return null;
-    const mainContent = this.state.authenticated ? (
-        <div >
-        <button className = 'btn btn-light btn-lg' onClick = {this.logout}>Logout</button>
-        </div>
-    ):(
-        <div className = 'lead'> 
-        <button className = 'btn btn-light btn-lg' onClick = {this.login}>Login</button>
-        </div>
-    )
+    
+  const name = localStorage.getItem('name')
+  console.log(this.state.arrCar)
+    
     return (
         <div>
-            <h1>Welcome {currentUserName}</h1>
-            <p>Email: {currentUserEmale}</p>
-            {mainContent}
-            <Orders />
+            <h1>Welcome {name}</h1>
+            <div className = 'basket'>
+              <h4>Корзина</h4>
+  {this.state.arrCar.map((item) => {
+    return <div>{item[0].model}
+      <img src = {require (`../../img/${item[0].img[0]}`)}  width = '100%' height = '100%' alt = 'car'/>
+      <div className = 'info_car__price'>
+        <h6>{item[0].year}</h6>
+        <h5>{item[0].price} $</h5>
+      </div>
+    </div>
+  })}
+            </div>
+
         </div>
     );
   }
 }
-);
+

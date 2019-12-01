@@ -4,7 +4,6 @@ import { searchCar } from '../../../actions/searchCar'
 import { returnState } from '../../../actions/returnState'
 import { Link } from 'react-router-dom'
 const Search = (props) => {
-    console.log(props)
     const { searchCar, returnState } = props
     const [ valueInput, setValueInput ] = useState ('')
     const onChangeValueInput = ({ target : { value }}) => {

@@ -16,14 +16,14 @@ const SearchByParameters = (props) => {
             searchCarBody, searchcarFuel } = props
     const yearBirth = []
     const price = ['1000', '3000', '5000', '6000','7000','10000', '14000', '17000', '20000', '25000', '30000', '35000', '40000', '50000'] 
-    const mark = ['марка автомобиля'];
+    const mark = ['марка автомобиля', 'bmw', 'audi', 'ford', 'subaru', 'peugeot', 'toyota', 'geely', 'citroen', 'mercedes', 'iveco', 'volkswagen'];
     const body = ['тип кузова'];
-    listCar.forEach(element => {
-        if(!mark.includes(element.mark)){
-            mark.push(element.mark);
-        }
-        return mark;
-    });
+    // listCar.forEach(element => {
+    //     if(!mark.includes(element.mark)){
+    //         mark.push(element.mark);
+    //     }
+    //     return mark;
+    // });
     listCar.forEach(element => {
         if(!body.includes(element.body)){
             body.push(element.body)

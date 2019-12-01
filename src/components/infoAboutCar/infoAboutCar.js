@@ -1,20 +1,36 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import './style.css'
+import { addCarInBasket } from '../../actions/addCarInbasket'
+import data from '../../data.json'
 const InfoAboutCar = (props) => {
-    const { listCar } = props
+    const { listCar, addCarInBasket } = props
     const [ valueButton, setValueButton ] = useState('Добавить в корзину')
-    console.log(listCar[0].model)
-    const addInBasket = () => {
-        localStorage.setItem(`${listCar[0].model}`, JSON.stringify(listCar[0]))
-        
-        setValueButton('Перейти в карзину')
-        
+    const arr = []
+    let car = []
+    const getCar = () => {
+        let arrCar = localStorage.getItem('car')
+        if(arrCar !== null){
+            car = JSON.parse(arrCar)
+        }
+        return car
     }
+    const addInBasket = () => {
+        let car = getCar(listCar)
+        let index = car.indexOf(listCar[0].id)
+        if(index === -1){
+            car.push(listCar)
+        }
+        
+        localStorage.setItem(`car`, JSON.stringify(car))
+        setValueButton('Перейти в карзину')
+
+    }
+
     const settings = {
         dots: true,
       infinite: true,
@@ -24,6 +40,7 @@ const InfoAboutCar = (props) => {
       autoplaySpeed: 2000,
       pauseOnHover: true
       };
+    
     return(
         <div className = 'info_about__car'>
             <h5>{listCar[0].mark.toUpperCase()} {listCar[0].model}, {listCar[0].year}<span>{listCar[0].price} $</span></h5>
@@ -39,8 +56,8 @@ const InfoAboutCar = (props) => {
                     <li><span>Привод:</span> {listCar[0].drive_unit.toLowerCase()}</li>
                     <li><span>Стоимость:</span> {listCar[0].price} $</li>
                 </ul>
-                {valueButton === 'Перейти в карзину' ? <Link to = '/registration'>
-                <button onClick = {addInBasket}>{valueButton}</button>
+                {valueButton === 'Перейти в карзину' ? <Link to = '/profile'>
+                <button >{valueButton}</button>
                 </Link> : <button onClick = {addInBasket}>{valueButton}</button>}
             </div>
             <div>
@@ -72,4 +89,4 @@ const maStateToProps = ({listCar}) => {
         listCar
     }
 }
-export default connect (maStateToProps) (InfoAboutCar)
+export default connect (maStateToProps, { addCarInBasket }) (InfoAboutCar)

@@ -1,7 +1,6 @@
 import React from 'react'
 import Search from './Search/search'
-import Basket  from './basket/basket'
-import { PersonalArea } from './personal-area/personal-area'
+import PersonalArea from './personal-area/personal-area'
 import NavMenu from './nav-menu/nav-menu'
 import { Link } from 'react-router-dom'
 import './style.css'
@@ -15,7 +14,6 @@ export const Header = () => {
                 </Link>
                 <Search />
                 <PersonalArea />
-                <Basket /> 
             </div>
         </div>
         <NavMenu />
