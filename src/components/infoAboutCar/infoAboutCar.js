@@ -6,11 +6,9 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import './style.css'
 import { addCarInBasket } from '../../actions/addCarInbasket'
-import data from '../../data.json'
 const InfoAboutCar = (props) => {
-    const { listCar, addCarInBasket } = props
+    const { listCar } = props
     const [ valueButton, setValueButton ] = useState('Добавить в корзину')
-    const arr = []
     let car = []
     const getCar = () => {
         let arrCar = localStorage.getItem('car')
@@ -25,12 +23,9 @@ const InfoAboutCar = (props) => {
         if(index === -1){
             car.push(listCar)
         }
-        
         localStorage.setItem(`car`, JSON.stringify(car))
         setValueButton('Перейти в карзину')
-
     }
-
     const settings = {
         dots: true,
       infinite: true,
@@ -40,7 +35,6 @@ const InfoAboutCar = (props) => {
       autoplaySpeed: 2000,
       pauseOnHover: true
       };
-    
     return(
         <div className = 'info_about__car'>
             <h5>{listCar[0].mark.toUpperCase()} {listCar[0].model}, {listCar[0].year}<span>{listCar[0].price} $</span></h5>
