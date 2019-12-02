@@ -75,8 +75,6 @@
 .options_car form > div button:last-child{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-
-   
 }
 .result_search{
     width: 80%;
@@ -125,7 +123,7 @@
 }
 .result_search ul li{
     width: 100%;
-    height: 27vh;
+    height: 190px;
     display: flex;
     border-top: 1px solid #ececec;
     border-left: 1px solid #ececec;
@@ -135,8 +133,8 @@
     border-bottom: 1px solid #ececec;
 }
 .result_search ul li img{
-    height: 100%;
-    width: 20%;
+    height: 140px;
+    width: 190px;
     margin-right: 2%;
     object-fit: cover;
 }
@@ -161,11 +159,6 @@
     overflow: hidden;
 }
 @media  (max-width: 992px) {
-    .result_search ul li img{
-        height: 75%;
-        width: 22%;
-        margin-right: 2%;
-    }
     #root > div {
         width: 95% !important;
     }
@@ -173,28 +166,3 @@
         width: 65% !important;
     }
 }
-@media  (min-width: 1750px) {
-    .result_search ul li img{
-        height: 90%;
-        width: 22%;
-        margin-right: 2%;
-    }
-}
-@media  (min-width: 1950px) {
-    .result_search ul li img{
-        height: 60%;
-        width: 32%;
-    }
-}
-@media (max-width: 720px) {
-    .result_search ul li img{
-        height: 100%;
-        width: 12%;
-    }
-  }
-  @media (max-width: 370px) {
-    .result_search ul li img{
-        height: 100%;
-        width: 5%;
-    }
-  }
