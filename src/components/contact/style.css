@@ -24,9 +24,10 @@
 .faqLi_8:hover .listFaq_8,.faqLi_9:hover .listFaq_9 {
     position: relative;
     opacity: 1;
-    transition: 0.5s opacity;
+    transition: 0.1s all;
     left: 0;
     background-color: #e2e2e2;
     margin-top: 1%;
+    padding: 2% 0;
 }
 
