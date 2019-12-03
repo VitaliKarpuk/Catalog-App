@@ -103,12 +103,12 @@
     background-color: rgb(106, 136, 228);
 }
 .do-order button{
-    background-color: royalblue;
+    background-color: rgb(199, 48, 22);
     border: none;
     color: #ffffff;
     padding: 2%;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(126, 77, 77, 0.808);
 }
 .do-order > div{
     width: 100%;
