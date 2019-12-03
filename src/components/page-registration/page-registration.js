@@ -3,22 +3,34 @@ import './style.css'
 
 export default class PageRegistration extends Component {
   constructor(props) {
-    super();
+    super()
     this.state = {
       arrCar: [],
       valueClicer: 1,
-      totalСost: 0
-    };
-    this.handleClickPlus = this.handleClickPlus.bind(this);
+      totalСost: 0,
+      totalCar: 'машина',
+      idRemove: null
+    }
+    this.handleClickPlus = this.handleClickPlus.bind(this)
     this.handleClickMinus = this.handleClickMinus.bind(this)
+    this.handleRemove = this.handleRemove.bind(this)
 }
   componentDidMount() {
     const car = JSON.parse(localStorage.getItem('car'))
     const arrPrice = []
     car.forEach(element => arrPrice.push(element[0].price) );
+    let c = ''
+    if(car.length === 1 ){
+       c = 'машина'
+    }if (car.length === 2 || car.length === 3 || car.length === 4 ){
+      c = 'машины'
+    }if(car.length >= 5){
+     c = 'машин'
+    }
     this.setState({
       arrCar: car,
-      totalСost: arrPrice.reduce((sum, current) => +sum + +current, 0)
+      totalСost: arrPrice.reduce((sum, current) => +sum + +current, 0),
+      totalCar: c
     })
   }
 
@@ -28,11 +40,29 @@ export default class PageRegistration extends Component {
   handleClickMinus() {
     this.setState((prevState) => ({ valueClicer: prevState.valueClicer - 1 }));
   }
+  handleRemove(e){
+    const carRemoveArr = JSON.parse(localStorage.getItem('car'))
+    const newArrCar = carRemoveArr.filter(elem => elem[0].id != e.target.id)
+    const arrPrice = []
+    newArrCar.forEach(element => arrPrice.push(element[0].price) );
+    let c = ''
+    if(newArrCar.length === 1 ){
+      c = 'машина'
+    }if (newArrCar.length === 2 || newArrCar.length === 3 || newArrCar.length === 4 ){
+      c = 'машины'
+    }if(newArrCar.length >= 5){
+      c = 'машин'
+     }
+    this.setState({
+      arrCar:newArrCar,
+      totalСost: arrPrice.reduce((sum, current) => +sum + +current, 0),
+      totalCar: c
+    })
+    localStorage.setItem('car', JSON.stringify(newArrCar))
+  }
   render() {
-  const name = localStorage.getItem('name')    
     return (
       <>
-        <h1>Welcome {name}</h1>
         <div className = 'basket'>
           <div>
           {this.state.arrCar.map((item, index) => {
@@ -53,18 +83,21 @@ export default class PageRegistration extends Component {
                             <div onClick = {this.handleClickMinus}><i class="fa fa-minus"  aria-hidden="true"></i></div>
                           </div>
                           <h5>{item[0].price} $</h5>
-                          <button className = 'remove_basket'>Убрать из корзины</button>
-                          
+                          <button className = 'remove_basket' id = {item[0].id} onClick = {this.handleRemove}>Убрать из корзины</button>
                         </div>
                       </div>
                     </div>
           })}
           </div>
           <div className = 'do-order'>
-            <h5>Итого:</h5>
-            <h4>{this.state.totalСost} $</h4>
-            </div>
-            </div>
+            {localStorage.getItem('car') === null || this.state.arrCar.length === 0  ? 'Ваша корзина пуста' :
+            <div>
+              <h4>Итого: {`${this.state.totalСost} $`} </h4>
+              <h5>{this.state.arrCar.length} {this.state.totalCar}</h5>
+            </div>}
+            <button>Перейти к оформлению</button>
+          </div>
+          </div>
         </>
     );
   }
