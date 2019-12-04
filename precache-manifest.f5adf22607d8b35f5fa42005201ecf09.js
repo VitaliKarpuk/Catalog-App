@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5085ce23e34b81b8ada638bfb6dc1fd1",
+    "revision": "1edc1609d5f9b81efff5e85679a87c5c",
     "url": "/Catalog-App/index.html"
   },
   {
-    "revision": "cf3f3bdfe8ef2436230f",
-    "url": "/Catalog-App/static/css/2.7ccd2839.chunk.css"
+    "revision": "9f5076fb8143607f0930",
+    "url": "/Catalog-App/static/css/2.85ca7f4e.chunk.css"
   },
   {
-    "revision": "4f32f377baf78b5166ac",
-    "url": "/Catalog-App/static/css/main.6f382448.chunk.css"
+    "revision": "7979b4b50261a0473a01",
+    "url": "/Catalog-App/static/css/main.53efde4d.chunk.css"
   },
   {
-    "revision": "cf3f3bdfe8ef2436230f",
-    "url": "/Catalog-App/static/js/2.c249402c.chunk.js"
+    "revision": "9f5076fb8143607f0930",
+    "url": "/Catalog-App/static/js/2.2742c29f.chunk.js"
   },
   {
-    "revision": "4f32f377baf78b5166ac",
-    "url": "/Catalog-App/static/js/main.a87ea0a7.chunk.js"
+    "revision": "7979b4b50261a0473a01",
+    "url": "/Catalog-App/static/js/main.016e795f.chunk.js"
   },
   {
     "revision": "b0e5dad5f01900b5cbb4",
@@ -354,6 +354,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2bb369173aeb9a385d79fe21a73b0ddd",
     "url": "/Catalog-App/static/media/React App.2bb36917.doc"
+  },
+  {
+    "revision": "8ad7f27cb96dac8de21e48f526c5cbe7",
+    "url": "/Catalog-App/static/media/basket.8ad7f27c.ico"
   },
   {
     "revision": "1b6c40fd7c784b0e667b7fd7b7b81acc",
