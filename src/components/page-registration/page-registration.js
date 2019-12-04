@@ -96,15 +96,14 @@ export default class PageRegistration extends Component {
             {localStorage.getItem('car') === null || this.state.arrCar.length === 0  ?
              <div className = 'order-empty'>
                <Link to = '/'><h3>onlin<span>car</span></h3></Link>
-                <h4>Корзина</h4>
                 <img src = {require (`../../img/truck.svg`)}  width = '90%' height = '90%' alt = 'car'/>
                 <p>Ваша корзина пуста. Перейдите в <Link to = 'catalog'>каталог</Link>  и добавьте товары.</p>
              </div>:
             
             <div className = 'do-order'>
             <div>
-              <h4>Итого: {`${this.state.totalСost} $`} </h4>
-              <h5>{this.state.arrCar.length} {this.state.totalCar}</h5>
+              <h4>Итого: {this.state.arrCar.length} {this.state.totalCar} на сумму <span>{`${this.state.totalСost} $`}</span></h4>
+              
             </div>
             <button>Перейти к оформлению</button>
           </div>}

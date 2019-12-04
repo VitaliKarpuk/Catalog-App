@@ -12,16 +12,19 @@
 .info_car_options ul{
     list-style: none;
     padding: 0;
+    padding-left: 10px;
 }
 .info_car_options ul li span{
     color: #777;
     font-size: 12px;
     display: inline-block;
-    width: 40%;
+    width: 85px;
 }
 .info_about__car > div{
     width: 100%;
     display: flex;
+    border-top: 1px solid #ececec;
+    padding-top: 15px;
 }
 .info_about__car > div > div p {
     margin-top: 4%;
@@ -32,8 +35,7 @@
 .info_about__car h5 {
     width: 100%;
     padding-bottom: 1%;
-    margin-bottom: 2%;
-    border-bottom: 1px solid #ececec;
+    margin-left: 10px;
     font-weight: bold;
 }
 .info_about__car h5 span{
@@ -56,6 +58,7 @@
     border: none;
     color: #ffffff;
     padding: 2%;
+    margin-left: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }

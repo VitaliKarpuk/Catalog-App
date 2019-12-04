@@ -3,6 +3,7 @@ import Search from './Search/search'
 import PersonalArea from './personal-area/personal-area'
 import NavMenu from './nav-menu/nav-menu'
 import { Link } from 'react-router-dom'
+import Basket from './basket/basket'
 import './style.css'
 export const Header = () => {
     return(
@@ -13,6 +14,7 @@ export const Header = () => {
                     <div className = 'header_logo'>onlin<span>car</span></div>
                 </Link>
                 <Search />
+                <Basket />
                 <PersonalArea />
             </div>
         </div>

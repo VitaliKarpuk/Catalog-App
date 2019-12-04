@@ -104,3 +104,16 @@ a:hover{
 .fa-search:hover{
     cursor: pointer;
 }
+.mybasket{
+    width: 35px;
+    height: 35px;
+    background-image: url(../../img/basket.ico) ;
+    background-size: 100% 100%;
+}
+.mybasket div{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 100%;
+    top: -8px;
+}

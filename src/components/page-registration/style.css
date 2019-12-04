@@ -1,18 +1,25 @@
 .basket{
-    width: 50%;
+    width: 90%;
     height: 100%;
     min-height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+
 
 }
 .basket > div:first-child{
-    width: 75%;
+    width: 100%;
     margin-top: 1%;
     order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .car_in__basket{
-    width: 100%;
+    width: 90%;
     height: 150px;;
     display: flex;
     box-shadow: 0 3px 10px 0 rgba(51,51,51,.2);
@@ -28,17 +35,18 @@
     height: 125px;
 }
 .do-order{
-    width: 23%;
+    width: 90%;
     height: 200px;
     margin-top: 1%;
-    box-shadow: 0 3px 10px 0 rgba(51,51,51,.2);
     border-radius: 10px;
     padding: 9px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     order: 4;
+}
+.do-order span{
+    font-weight: bold;
 }
 .info_car_basket{
     width: 100%;
@@ -113,9 +121,10 @@
     padding: 2%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(126, 77, 77, 0.808);
+    width: 300px;
 }
 .do-order > div{
-    width: 100%;
+    width: 420px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -125,13 +134,12 @@
     text-align: center;
 }
 .order-empty{
-    width: 100%;
+    width: 70%;
     height: 380px;
     align-self: center;
     order: 2;
     position: relative;
-    top: 0;
-    left: 25%;
+    top: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
