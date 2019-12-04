@@ -19,13 +19,7 @@ const InfoAboutCar = (props) => {
     }
     const addInBasket = () => {
         let car = getCar(listCar)
-        let a = [];
-        console.log(car)
-        // for(let i = 0; i < car.length; i++){
-            
-        //     console.log(listCar[0].id)
-        // }
-        let b = car.filter(elem => elem[0].id !== listCar[0].id)
+
         let index = car.indexOf(listCar.id)
         if(index === -1){
             car.push(listCar)

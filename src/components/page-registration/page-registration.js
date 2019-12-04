@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './style.css'
 
 export default class PageRegistration extends Component {
@@ -9,7 +10,7 @@ export default class PageRegistration extends Component {
       valueClicer: 1,
       totalСost: 0,
       totalCar: 'машина',
-      idRemove: null
+      idRemove: null,
     }
     this.handleClickPlus = this.handleClickPlus.bind(this)
     this.handleClickMinus = this.handleClickMinus.bind(this)
@@ -26,11 +27,11 @@ export default class PageRegistration extends Component {
       c = 'машины'
     }if(car.length >= 5){
      c = 'машин'
-    }
+    };
     this.setState({
       arrCar: car,
       totalСost: arrPrice.reduce((sum, current) => +sum + +current, 0),
-      totalCar: c
+      totalCar: c,
     })
   }
 
@@ -60,7 +61,9 @@ export default class PageRegistration extends Component {
     })
     localStorage.setItem('car', JSON.stringify(newArrCar))
   }
+  
   render() {
+    
     return (
       <>
         <div className = 'basket'>
@@ -77,11 +80,11 @@ export default class PageRegistration extends Component {
                           <p>{item[0].body.toLowerCase()}, {item[0].fuel.toLowerCase()}, {item[0].drive_unit.toLowerCase()}</p>
                         </div>
                         <div>
-                          <div className = 'clicer_basket'>
+                          {/* <div className = 'clicer_basket'>
                             <div onClick = {this.handleClickPlus} key = {index}><i class= 'fa fa-plus' aria-hidden="true"></i></div>
                             {this.state.valueClicer}
                             <div onClick = {this.handleClickMinus}><i class="fa fa-minus"  aria-hidden="true"></i></div>
-                          </div>
+                          </div> */}
                           <h5>{item[0].price} $</h5>
                           <button className = 'remove_basket' id = {item[0].id} onClick = {this.handleRemove}>Убрать из корзины</button>
                         </div>
@@ -89,14 +92,22 @@ export default class PageRegistration extends Component {
                     </div>
           })}
           </div>
-          <div className = 'do-order'>
-            {localStorage.getItem('car') === null || this.state.arrCar.length === 0  ? 'Ваша корзина пуста' :
+          
+            {localStorage.getItem('car') === null || this.state.arrCar.length === 0  ?
+             <div className = 'order-empty'>
+               <Link to = '/'><h3>onlin<span>car</span></h3></Link>
+                <h4>Корзина</h4>
+                <img src = {require (`../../img/truck.svg`)}  width = '90%' height = '90%' alt = 'car'/>
+                <p>Ваша корзина пуста. Перейдите в <Link to = 'catalog'>каталог</Link>  и добавьте товары.</p>
+             </div>:
+            
+            <div className = 'do-order'>
             <div>
               <h4>Итого: {`${this.state.totalСost} $`} </h4>
               <h5>{this.state.arrCar.length} {this.state.totalCar}</h5>
-            </div>}
+            </div>
             <button>Перейти к оформлению</button>
-          </div>
+          </div>}
           </div>
         </>
     );

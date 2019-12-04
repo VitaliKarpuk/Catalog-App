@@ -1,12 +1,15 @@
 .basket{
     width: 50%;
     height: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
+
 }
 .basket > div:first-child{
     width: 75%;
     margin-top: 1%;
+    order: 3;
 }
 .car_in__basket{
     width: 100%;
@@ -35,6 +38,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    order: 4;
 }
 .info_car_basket{
     width: 100%;
@@ -119,4 +123,24 @@
 .do-order > div h4, .do-order > div h5{
     width: 100%;
     text-align: center;
+}
+.order-empty{
+    width: 100%;
+    height: 380px;
+    align-self: center;
+    order: 2;
+    position: relative;
+    top: 0;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 3px rgb(187, 185, 185), -1em 0 .4em rgb(187, 187, 187);
+}
+.order-empty h4{
+    width: 90%;
+}
+.order-empty span{
+    color: rgb(204, 0, 0);
 }

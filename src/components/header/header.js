@@ -10,7 +10,7 @@ export const Header = () => {
         <div className = 'header_wrapper'>
             <div className = 'header'>
                 <Link to = '/'>
-                    <div className = 'header_logo'></div>
+                    <div className = 'header_logo'>onlin<span>car</span></div>
                 </Link>
                 <Search />
                 <PersonalArea />

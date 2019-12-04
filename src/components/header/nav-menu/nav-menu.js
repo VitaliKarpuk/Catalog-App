@@ -36,7 +36,7 @@ export const NavMenu = (props) => {
         <div className = 'nav_menu'>
             <ul className = 'nav_menu__catalog'>
                 <Link to = '/catalog'>
-                    <li><i className="fa fa-list" aria-hidden="true" onClick = { onClickCatalog }></i> <span onClick = { onClickCatalog }>Кoталог</span>
+                    <li><i className="fa fa-list" aria-hidden="true" onClick = { onClickCatalog }></i> <span onClick = { onClickCatalog }>Каталог</span>
                         <ul className = 'menu_catalog'>
                             <Link to = '/catalog/newcar' onClick = {onClickNewCar}>
                                 <li>АВТОМОБИЛИ С САЛОНА</li>

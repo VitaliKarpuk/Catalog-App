@@ -45,7 +45,7 @@ export default class PersonalArea  extends React.Component {
             <div>
             {!name && <div className = 'personal_area' onClick = { this.singIn }>
                 <i className="fa fa-user fa-2x" aria-hidden="true"></i>
-              <p >Log In</p>
+              <p >Войти</p>
           </div>}
           {name && <Link to = '/profile'><div className = 'personal_area'>
             <i className="fa fa-user fa-2x" aria-hidden="true"></i>

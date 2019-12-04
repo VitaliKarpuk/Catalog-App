@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './style.css'
 import { connect } from 'react-redux'
@@ -10,6 +10,25 @@ const Catalog = (props) => {
     const { listCar, infoCar, sortPrice, sortYear } = props
     const onChooseMark = (e) => {
         infoCar(e.target.className)
+    }
+    const [ valueButton, setValueButton ] = useState('Добавить в корзину')
+    let car = []
+    const getCar = () => {
+        let arrCar = localStorage.getItem('car')
+        if(arrCar !== null){
+            car = JSON.parse(arrCar)
+        }
+        return car
+    }
+    const addInBasket = () => {
+        let car = getCar(listCar)
+
+        let index = car.indexOf(listCar.id)
+        if(index === -1){
+            car.push(listCar)
+        }
+        localStorage.setItem(`car`, JSON.stringify(car))
+        setValueButton('Перейти в карзину')
     }
     return(
         <div className = 'catalog_list'>
@@ -33,13 +52,19 @@ const Catalog = (props) => {
                                             <h5>{elem.price} $</h5>
                                         </div>
                                         <div>
+                                            <div>
                                             <Link to = '/catalog/infocar' onClick = { onChooseMark }>
                                                 <h5 className = {elem.model}>{elem.mark.toUpperCase()} {elem.model}</h5>
                                             </Link>
+                                            {/* {valueButton === 'Перейти в карзину' ? <Link to = '/profile'>
+                <button >{valueButton}</button>
+                </Link> : <button onClick = {addInBasket}>{valueButton}</button>} */}
+                                            </div>
+                                            
                                             <p>{elem.use}, {elem.fuel.toLowerCase()}, {elem.body.toLowerCase()}, {elem.drive_unit.toLowerCase()}</p>
                                             <p>{elem.keywords}</p>
-                                        </div>    
-                                    </div>    
+                                        </div>
+                                    </div>
                                 </li>})
                     }
                 </ul>

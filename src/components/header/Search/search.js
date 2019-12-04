@@ -19,12 +19,12 @@ const Search = (props) => {
     return(
 
             <form className = 'header_search' onSubmit = {findCar}>
-                <input type = 'text' placeholder = 'Поиск' value = {valueInput} onChange = { onChangeValueInput } />
+                <input type = 'text' placeholder = 'Поиск в каталоге. Например "bmw"' value = {valueInput} onChange = { onChangeValueInput } />
                 <div className = 'header_icon' >
                     <i className="fa fa-search" aria-hidden="true" onClick = {findCar}></i>
                 </div>
                 <Link to = '/catalog' >
-                    <button type = "submit" onClick = {findCar}>Найти</button>
+                    <button type = "submit" onClick = {findCar}>Поиск</button>
                 </Link>
             </form>
 
