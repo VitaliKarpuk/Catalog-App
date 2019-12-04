@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dbfc0fe5ded5545c3a290afa43cb42a9",
+    "revision": "5085ce23e34b81b8ada638bfb6dc1fd1",
     "url": "/Catalog-App/index.html"
   },
   {
-    "revision": "928e4ae53ac46689e22e",
-    "url": "/Catalog-App/static/css/2.62161d81.chunk.css"
+    "revision": "cf3f3bdfe8ef2436230f",
+    "url": "/Catalog-App/static/css/2.7ccd2839.chunk.css"
   },
   {
-    "revision": "6bc35de8bf4746672164",
-    "url": "/Catalog-App/static/css/main.9fcc9415.chunk.css"
+    "revision": "4f32f377baf78b5166ac",
+    "url": "/Catalog-App/static/css/main.6f382448.chunk.css"
   },
   {
-    "revision": "928e4ae53ac46689e22e",
-    "url": "/Catalog-App/static/js/2.2533ea80.chunk.js"
+    "revision": "cf3f3bdfe8ef2436230f",
+    "url": "/Catalog-App/static/js/2.c249402c.chunk.js"
   },
   {
-    "revision": "6bc35de8bf4746672164",
-    "url": "/Catalog-App/static/js/main.82eed794.chunk.js"
+    "revision": "4f32f377baf78b5166ac",
+    "url": "/Catalog-App/static/js/main.a87ea0a7.chunk.js"
   },
   {
     "revision": "b0e5dad5f01900b5cbb4",
@@ -450,5 +450,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3c12528ed7aec745a489a1a4e42422f4",
     "url": "/Catalog-App/static/media/themedata.3c12528e.thmx"
+  },
+  {
+    "revision": "5c693f56edc6abf6e2930c766b368657",
+    "url": "/Catalog-App/static/media/truck.5c693f56.svg"
   }
 ]);
