@@ -44,11 +44,11 @@ export default class PersonalArea  extends React.Component {
         return(
             <div>
             {!name && <div className = 'personal_area' onClick = { this.singIn }>
-                <i className="fa fa-user fa-2x" aria-hidden="true"></i>
+                <div className = 'google_icon'></div>
               <p >Войти</p>
           </div>}
           {name && <Link to = '/profile'><div className = 'personal_area'>
-            <i className="fa fa-user fa-2x" aria-hidden="true"></i>
+          <div className = 'google_icon'></div>
               <p >{name}</p>
           </div></Link>}
              </div>

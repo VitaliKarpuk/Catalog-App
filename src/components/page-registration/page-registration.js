@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './style.css'
+import { connect } from 'react-redux'
+import { totalOrder } from '../../actions/lengthBasket'
 
-export default class PageRegistration extends Component {
+class PageRegistration extends Component {
   constructor(props) {
     super()
     this.state = {
@@ -12,8 +14,6 @@ export default class PageRegistration extends Component {
       totalCar: 'машина',
       idRemove: null,
     }
-    this.handleClickPlus = this.handleClickPlus.bind(this)
-    this.handleClickMinus = this.handleClickMinus.bind(this)
     this.handleRemove = this.handleRemove.bind(this)
 }
   componentDidMount() {
@@ -35,12 +35,6 @@ export default class PageRegistration extends Component {
     })
   }
 
-  handleClickPlus(e) {
-    this.setState((prevState) => ({ valueClicer: prevState.valueClicer + 1 }));
-}
-  handleClickMinus() {
-    this.setState((prevState) => ({ valueClicer: prevState.valueClicer - 1 }));
-  }
   handleRemove(e){
     const carRemoveArr = JSON.parse(localStorage.getItem('car'))
     const newArrCar = carRemoveArr.filter(elem => elem[0].id != e.target.id)
@@ -60,6 +54,7 @@ export default class PageRegistration extends Component {
       totalCar: c
     })
     localStorage.setItem('car', JSON.stringify(newArrCar))
+    this.props.totalOrder(JSON.parse(localStorage.getItem('car')).length)
   }
   
   render() {
@@ -80,11 +75,6 @@ export default class PageRegistration extends Component {
                           <p>{item[0].body.toLowerCase()}, {item[0].fuel.toLowerCase()}, {item[0].drive_unit.toLowerCase()}</p>
                         </div>
                         <div>
-                          {/* <div className = 'clicer_basket'>
-                            <div onClick = {this.handleClickPlus} key = {index}><i class= 'fa fa-plus' aria-hidden="true"></i></div>
-                            {this.state.valueClicer}
-                            <div onClick = {this.handleClickMinus}><i class="fa fa-minus"  aria-hidden="true"></i></div>
-                          </div> */}
                           <h5>{item[0].price} $</h5>
                           <button className = 'remove_basket' id = {item[0].id} onClick = {this.handleRemove}>Убрать из корзины</button>
                         </div>
@@ -112,4 +102,9 @@ export default class PageRegistration extends Component {
     );
   }
 }
-
+const mapStateToProps = (state) => {
+  return(
+    state
+  )
+}
+export default connect (mapStateToProps, {totalOrder}) (PageRegistration)

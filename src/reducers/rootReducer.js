@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import { listCar } from './listCar'
-import { sortPrice } from './sortPricer'
+import { lengthBasket } from './lengthBaket'
 export const rootReducer = combineReducers ({
-    listCar
+    listCar,
+    lengthBasket
 })

@@ -116,4 +116,18 @@ a:hover{
     position: relative;
     left: 100%;
     top: -8px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 0.5rem;
+}
+.google_icon{
+    width: 35px;
+    height: 35px;
+    background-image: url(../../img//google_icon.ico);
+    background-size: 100% 100%;
 }

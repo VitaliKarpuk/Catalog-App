@@ -11,7 +11,7 @@ const Catalog = (props) => {
     const onChooseMark = (e) => {
         infoCar(e.target.className)
     }
-    const [ valueButton, setValueButton ] = useState('Добавить в корзину')
+    const [ valueButton, setValueButton ] = useState('')
     let car = []
     const getCar = () => {
         let arrCar = localStorage.getItem('car')
@@ -20,16 +20,15 @@ const Catalog = (props) => {
         }
         return car
     }
-    const addInBasket = () => {
-        let car = getCar(listCar)
+    const addInBasket = (e) => {
 
-        let index = car.indexOf(listCar.id)
-        if(index === -1){
-            car.push(listCar)
-        }
+        setValueButton(document.getElementById(`${e.target.id}`).innerText = 'Перейти в корзину')
+
+
+        let car = getCar(listCar)
         localStorage.setItem(`car`, JSON.stringify(car))
-        setValueButton('Перейти в карзину')
     }
+    console.log(valueButton)
     return(
         <div className = 'catalog_list'>
             <SearchByParameters/>
@@ -37,9 +36,10 @@ const Catalog = (props) => {
                 <div>
                     <p>Сортировать по :</p>
                     <div>
-                        <button onClick = { () => sortYear()}>Год выпуска</button>
-                        <button onClick = {() => sortPrice()}>
-                            Цена</button>
+                        <ul className = 'sort'>
+                            <li onClick = {() => sortYear()}><span>году выпуска</span></li>
+                            <li onClick = { () => sortPrice()}><span>цене</span></li>
+                        </ul>
                     </div>
                 </div>
                 <ul>
@@ -53,12 +53,14 @@ const Catalog = (props) => {
                                         </div>
                                         <div>
                                             <div>
-                                            <Link to = '/catalog/infocar' onClick = { onChooseMark }>
+                                            <Link to = '/catalog/infocar'  onClick = { onChooseMark }>
                                                 <h5 className = {elem.model}>{elem.mark.toUpperCase()} {elem.model}</h5>
                                             </Link>
-                                            {/* {valueButton === 'Перейти в карзину' ? <Link to = '/profile'>
-                <button >{valueButton}</button>
-                </Link> : <button onClick = {addInBasket}>{valueButton}</button>} */}
+                                            {valueButton === 'Перейти в корзину' ?
+                                            <Link to = '/profile'>
+                                                <button id = {index}></button>
+                                            </Link> :
+                                             <button onClick = {addInBasket} id = {index}>Добавить в корзину</button>}
                                             </div>
                                             
                                             <p>{elem.use}, {elem.fuel.toLowerCase()}, {elem.body.toLowerCase()}, {elem.drive_unit.toLowerCase()}</p>

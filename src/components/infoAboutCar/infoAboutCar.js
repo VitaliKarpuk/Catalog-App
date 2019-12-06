@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import './style.css'
 import { addCarInBasket } from '../../actions/addCarInbasket'
+import { totalOrder } from '../../actions/lengthBasket'
 const InfoAboutCar = (props) => {
-    const { listCar } = props
+    const { listCar, totalOrder } = props
     const [ valueButton, setValueButton ] = useState('Добавить в корзину')
     let car = []
     const getCar = () => {
@@ -19,13 +20,14 @@ const InfoAboutCar = (props) => {
     }
     const addInBasket = () => {
         let car = getCar(listCar)
-
         let index = car.indexOf(listCar.id)
         if(index === -1){
             car.push(listCar)
         }
         localStorage.setItem(`car`, JSON.stringify(car))
         setValueButton('Перейти в карзину')
+        totalOrder(JSON.parse(localStorage.getItem('car')).length)
+
     }
     const settings = {
         dots: true,
@@ -84,4 +86,4 @@ const maStateToProps = ({listCar}) => {
         listCar
     }
 }
-export default connect (maStateToProps, { addCarInBasket }) (InfoAboutCar)
+export default connect (maStateToProps, { addCarInBasket, totalOrder }) (InfoAboutCar)

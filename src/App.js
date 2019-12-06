@@ -7,6 +7,7 @@ import Catalog from './components/catalog/catalog'
 import { AboutUs } from './components/about-us/about_us'
 import { Services } from './components/services/services'
 import { Contact } from './components/contact/contact'
+import Basket  from './components/header/basket/basket'
 import PageRegistration from './components/page-registration/page-registration'
 
 export const App = () => {
@@ -19,6 +20,7 @@ export const App = () => {
       <Route path = '/services' component = { Services } />
       <Route path = '/about' component = { AboutUs } />
       <Route path = '/contact' component = { Contact } />
+      <Route path = '/basket' component = { PageRegistration } />
       <Route path = '/profile' component = {PageRegistration} />
     </>
   )

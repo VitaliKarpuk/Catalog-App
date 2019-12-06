@@ -1,22 +1,28 @@
-import React, { useState, useEffect} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-const Basket = () => {
-    const [ lengthOrder, setLengthOrder ] = useState ('')
-    useEffect (() => {
-        const l = JSON.parse(localStorage.getItem('car'))
-        setLengthOrder(l.length)
-    })
+import { connect } from 'react-redux'
+const Basket = (props) =>  {
+    console.log(props)
     return(
         <div className = 'header_basket'>
-            <Link to = '/registration'>
-            <div className = 'mybasket'>
-                <div>{lengthOrder}</div>
+            <Link to = '/basket'>
+                {props.lengthBasket === 0 ? <div className = 'mybasket'></div> : 
+                <div className = 'mybasket'>
+                <div>{props.lengthBasket}</div>
             </div>
+                }
+            
                 <p>Корзина</p>
                
             </Link>
          </div>
      )
-    
 }
-export default Basket
+    
+const mapStateToProps = ({lengthBasket}) => {
+    return{
+        lengthBasket
+    }
+        
+}
+export default connect(mapStateToProps)(Basket)
