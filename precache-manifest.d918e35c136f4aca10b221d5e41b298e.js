@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1edc1609d5f9b81efff5e85679a87c5c",
+    "revision": "b0fc886de1eb256861d194bc8d18227b",
     "url": "/Catalog-App/index.html"
   },
   {
-    "revision": "9f5076fb8143607f0930",
-    "url": "/Catalog-App/static/css/2.85ca7f4e.chunk.css"
+    "revision": "cbe0d5fde38a62073038",
+    "url": "/Catalog-App/static/css/2.7ccd2839.chunk.css"
   },
   {
-    "revision": "7979b4b50261a0473a01",
-    "url": "/Catalog-App/static/css/main.53efde4d.chunk.css"
+    "revision": "01cfe06e6e211dc8b671",
+    "url": "/Catalog-App/static/css/main.56904d4c.chunk.css"
   },
   {
-    "revision": "9f5076fb8143607f0930",
-    "url": "/Catalog-App/static/js/2.2742c29f.chunk.js"
+    "revision": "cbe0d5fde38a62073038",
+    "url": "/Catalog-App/static/js/2.20461a32.chunk.js"
   },
   {
-    "revision": "7979b4b50261a0473a01",
-    "url": "/Catalog-App/static/js/main.016e795f.chunk.js"
+    "revision": "01cfe06e6e211dc8b671",
+    "url": "/Catalog-App/static/js/main.5c1fa501.chunk.js"
   },
   {
     "revision": "b0e5dad5f01900b5cbb4",
@@ -420,6 +420,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Catalog-App/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
+    "revision": "38a82e56f934391e57713a675c4d4a9d",
+    "url": "/Catalog-App/static/media/google_icon.38a82e56.ico"
+  },
+  {
     "revision": "a1a8cb16a060f6280a767187fd22e037",
     "url": "/Catalog-App/static/media/jquery.min.js.a1a8cb16.Без названия"
   },
@@ -458,5 +462,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5c693f56edc6abf6e2930c766b368657",
     "url": "/Catalog-App/static/media/truck.5c693f56.svg"
+  },
+  {
+    "revision": "255362e37e04f0565901f5d67333eca8",
+    "url": "/Catalog-App/static/media/user.255362e3.svg"
   }
 ]);

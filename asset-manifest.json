@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Catalog-App/static/css/main.53efde4d.chunk.css",
-    "main.js": "/Catalog-App/static/js/main.016e795f.chunk.js",
-    "main.js.map": "/Catalog-App/static/js/main.016e795f.chunk.js.map",
+    "main.css": "/Catalog-App/static/css/main.56904d4c.chunk.css",
+    "main.js": "/Catalog-App/static/js/main.5c1fa501.chunk.js",
+    "main.js.map": "/Catalog-App/static/js/main.5c1fa501.chunk.js.map",
     "runtime-main.js": "/Catalog-App/static/js/runtime-main.81e5ccf8.js",
     "runtime-main.js.map": "/Catalog-App/static/js/runtime-main.81e5ccf8.js.map",
-    "static/css/2.85ca7f4e.chunk.css": "/Catalog-App/static/css/2.85ca7f4e.chunk.css",
-    "static/js/2.2742c29f.chunk.js": "/Catalog-App/static/js/2.2742c29f.chunk.js",
-    "static/js/2.2742c29f.chunk.js.map": "/Catalog-App/static/js/2.2742c29f.chunk.js.map",
+    "static/css/2.7ccd2839.chunk.css": "/Catalog-App/static/css/2.7ccd2839.chunk.css",
+    "static/js/2.20461a32.chunk.js": "/Catalog-App/static/js/2.20461a32.chunk.js",
+    "static/js/2.20461a32.chunk.js.map": "/Catalog-App/static/js/2.20461a32.chunk.js.map",
     "index.html": "/Catalog-App/index.html",
-    "precache-manifest.f5adf22607d8b35f5fa42005201ecf09.js": "/Catalog-App/precache-manifest.f5adf22607d8b35f5fa42005201ecf09.js",
+    "precache-manifest.d918e35c136f4aca10b221d5e41b298e.js": "/Catalog-App/precache-manifest.d918e35c136f4aca10b221d5e41b298e.js",
     "service-worker.js": "/Catalog-App/service-worker.js",
-    "static/css/2.85ca7f4e.chunk.css.map": "/Catalog-App/static/css/2.85ca7f4e.chunk.css.map",
-    "static/css/main.53efde4d.chunk.css.map": "/Catalog-App/static/css/main.53efde4d.chunk.css.map",
+    "static/css/2.7ccd2839.chunk.css.map": "/Catalog-App/static/css/2.7ccd2839.chunk.css.map",
+    "static/css/main.56904d4c.chunk.css.map": "/Catalog-App/static/css/main.56904d4c.chunk.css.map",
     "static/media/0.chunk.js.Без названия": "/Catalog-App/static/media/0.chunk.js.0af21e3e.Без названия",
     "static/media/1.00182eb7.jpeg": "/Catalog-App/static/media/1.00182eb7.00182eb7.jpeg",
     "static/media/1.jpeg": "/Catalog-App/static/media/1.fcddfde9.jpeg",
@@ -39,7 +39,7 @@
     "static/media/3.jpeg": "/Catalog-App/static/media/3.f51636c9.jpeg",
     "static/media/Homework 4.doc": "/Catalog-App/static/media/Homework 4.bc5ad48f.doc",
     "static/media/React App.doc": "/Catalog-App/static/media/React App.2bb36917.doc",
-    "static/media/style.css": "/Catalog-App/static/media/basket.8ad7f27c.ico",
+    "static/media/style.css": "/Catalog-App/static/media/google_icon.38a82e56.ico",
     "static/media/bundle.js.Без названия": "/Catalog-App/static/media/bundle.js.1b6c40fd.Без названия",
     "static/media/car1.jpg": "/Catalog-App/static/media/car1.097bd9e4.jpg",
     "static/media/car2.jpg": "/Catalog-App/static/media/car2.ec41b012.jpg",
@@ -56,13 +56,14 @@
     "static/media/main.chunk.js.Без названия": "/Catalog-App/static/media/main.chunk.js.95d1e5d4.Без названия",
     "static/media/slick-theme.css": "/Catalog-App/static/media/slick.f97e3bbf.svg",
     "static/media/themedata.thmx": "/Catalog-App/static/media/themedata.3c12528e.thmx",
-    "static/media/truck.svg": "/Catalog-App/static/media/truck.5c693f56.svg"
+    "static/media/truck.svg": "/Catalog-App/static/media/truck.5c693f56.svg",
+    "static/media/user.svg": "/Catalog-App/static/media/user.255362e3.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.81e5ccf8.js",
-    "static/css/2.85ca7f4e.chunk.css",
-    "static/js/2.2742c29f.chunk.js",
-    "static/css/main.53efde4d.chunk.css",
-    "static/js/main.016e795f.chunk.js"
+    "static/css/2.7ccd2839.chunk.css",
+    "static/js/2.20461a32.chunk.js",
+    "static/css/main.56904d4c.chunk.css",
+    "static/js/main.5c1fa501.chunk.js"
   ]
 }
