@@ -6,8 +6,10 @@ import { infoCar } from '../../actions/infoCar'
 import { sortPrice } from '../../actions/sortPrice'
 import SearchByParameters from './searchByParameters/searchByParameters'
 import { sortYear } from '../../actions/sortYear'
+import { sortPriceMin } from '../../actions/sortePriceMin'
+import { sortYearMin } from '../../actions/sortYearMin'
 const Catalog = (props) => {
-    const { listCar, infoCar, sortPrice, sortYear } = props
+    const { listCar, infoCar, sortPrice, sortYear, sortPriceMin, sortYearMin } = props
     const onChooseMark = (e) => {
         infoCar(e.target.className)
     }
@@ -21,14 +23,10 @@ const Catalog = (props) => {
         return car
     }
     const addInBasket = (e) => {
-
         setValueButton(document.getElementById(`${e.target.id}`).innerText = 'Перейти в корзину')
-
-
         let car = getCar(listCar)
         localStorage.setItem(`car`, JSON.stringify(car))
     }
-    console.log(valueButton)
     return(
         <div className = 'catalog_list'>
             <SearchByParameters/>
@@ -37,8 +35,10 @@ const Catalog = (props) => {
                     <p>Сортировать по :</p>
                     <div>
                         <ul className = 'sort'>
-                            <li onClick = {() => sortYear()}><span>году выпуска</span></li>
-                            <li onClick = { () => sortPrice()}><span>цене</span></li>
+                            <li onClick = {() => sortYear()}><span>году выпуска &#x2193;</span></li>
+                            <li onClick = {() => sortYearMin()}><span>году выпуска &#x2191;</span></li>
+                            <li onClick = { () => sortPrice()}><span>цене &#x2193;</span></li>
+                            <li onClick = { () => sortPriceMin()}><span>цене &#x2191;</span></li>
                         </ul>
                     </div>
                 </div>
@@ -56,11 +56,11 @@ const Catalog = (props) => {
                                             <Link to = '/catalog/infocar'  onClick = { onChooseMark }>
                                                 <h5 className = {elem.model}>{elem.mark.toUpperCase()} {elem.model}</h5>
                                             </Link>
-                                            {valueButton === 'Перейти в корзину' ?
+                                            {/* {valueButton === 'Перейти в корзину' ?
                                             <Link to = '/profile'>
                                                 <button id = {index}></button>
                                             </Link> :
-                                             <button onClick = {addInBasket} id = {index}>Добавить в корзину</button>}
+                                             <button onClick = {addInBasket} id = {index}>Добавить в корзину</button>} */}
                                             </div>
                                             
                                             <p>{elem.use}, {elem.fuel.toLowerCase()}, {elem.body.toLowerCase()}, {elem.drive_unit.toLowerCase()}</p>
@@ -81,4 +81,4 @@ const mapStateToProps = ({listCar}) => {
         listCar
     }
 }
-export default connect (mapStateToProps, { infoCar, sortPrice, sortYear })(Catalog)
+export default connect (mapStateToProps, { infoCar, sortPrice, sortYear, sortPriceMin, sortYearMin })(Catalog)

@@ -80,7 +80,7 @@
     width: 80%;
 }
 .result_search > div{
-    width: 500px;
+    width: 600px;
     margin-left: 40px;
     display: flex;
     justify-content: flex-start;
@@ -91,7 +91,7 @@
     margin: 0;
 }
 .result_search > div .sort{
-    width: 300px;
+    width: 400px;
     margin-left: 20px;
     display: flex;
     justify-content: space-between;
@@ -99,6 +99,7 @@
 }
 .sort li{
     height: 100% !important;
+    width: 200px !important;
     display: flex;
     justify-content: center;
     padding: 0 !important;
@@ -110,6 +111,8 @@
 }
 .sort li span{
     border-bottom: 1px dotted rgb(209, 209, 209);
+    width: 100px;
+    margin-left: 10px;
 }
 .sort li:hover{
     cursor: pointer;

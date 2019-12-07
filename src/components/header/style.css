@@ -128,6 +128,86 @@ a:hover{
 .google_icon{
     width: 35px;
     height: 35px;
-    background-image: url(../../img//google_icon.ico);
+    background-image: url(../../img/google_icon.ico);
     background-size: 100% 100%;
+}
+.user_icon{
+    width: 35px;
+    height: 35px;
+    background-image: url(../../img/user_icon.ico);
+    background-size: 100% 100%;
+}
+.user_area{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.user_area p {
+    margin: 0;
+    font-size: 0.7rem;
+    color: rgb(83, 82, 82);
+}
+.user_menu {
+    display: flex;
+    width: 60px;
+    align-items: center;
+}
+.user_menu span{
+    color: rgb(83, 82, 82);
+    margin-left: 5px;
+}
+.user_false{
+    display: none;
+}
+.user_true{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 70px;
+    border: 1px solid rgb(221, 221, 221);
+    padding: 15px 10px;
+    z-index: 1;
+}
+.user_true > div:first-child{
+    border-bottom: 1px solid rgb(221, 221, 221);
+    display: flex;
+    justify-content: flex-end;
+}
+.user_true div{
+    display: flex;
+    padding: 0;
+    padding: 10px 0;
+}
+.user_true  a{
+    color: black;
+    display: flex;
+}
+.product_in_basket {
+    width: 20px;
+    margin-right: 5px;
+    height: 20px;
+    background-image: url(../../img/basket.ico);
+    background-size: 100% 100%;
+}
+.chat_icon{
+    width: 20px;
+    margin-right: 5px;
+    height: 20px;
+    background-image: url(../../img/chat_icon.ico);
+    background-size: 100% 100%;
+}
+.star_icon{
+    width: 20px;
+    margin-right: 5px;
+    height: 20px;
+    background-image: url(../../img/star_icon.ico);
+    background-size: 100% 100%;
+}
+.user_true div:hover{
+    cursor: pointer;
+    text-decoration: solid;
 }

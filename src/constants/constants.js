@@ -1,3 +1,5 @@
+import { sort } from "semver"
+
 export const SEARCH_CAR = 'SEARCH_CAR'
 export const RETURN_STATE = 'RETURN_STATE'
 export const INFO_CAR = 'INFO_CAR'
@@ -10,6 +12,8 @@ export const SEARCH_CAR_PRICE_END = 'SEARCH_CAR_PRICE_END'
 export const SEARCH_CAR_BODY = 'SEARCH_CAR_BODY'
 export const SEARCH_CAR_FUEL = 'SEARCH_CAR_FUEL'
 export const SORT_PRICE = 'SORT_PRICE'
+export const SORT_PRICE_MIN = 'SORT_PRICE_MIN'
 export const SORT_YEAR = 'SORT_YEAR'
+export const SORT_YEAR_MIN = 'SORT_YEAR_MIN'
 export const ADD_CAR_IN_BASKET = 'ADD_CAR_IN_BASKET'
 export const LENGHT_BASKET = 'LENGHT_BASKET'

@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 const Basket = (props) =>  {
-    console.log(props)
     return(
         <div className = 'header_basket'>
             <Link to = '/basket'>
@@ -11,9 +10,7 @@ const Basket = (props) =>  {
                 <div>{props.lengthBasket}</div>
             </div>
                 }
-            
-                <p>Корзина</p>
-               
+                <p>Корзина</p>               
             </Link>
          </div>
      )

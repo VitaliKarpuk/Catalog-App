@@ -1,8 +1,11 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-export default class PersonalArea  extends React.Component {
+class PersonalArea  extends React.Component {
     state = {
-        name: null
+        name: null,
+        user: 'user_false',
+        symbol: <span>&#x2228;</span>
     }
     componentDidMount() {
         window.gapi.load('auth2', function() {
@@ -27,16 +30,23 @@ export default class PersonalArea  extends React.Component {
         }).then(_authOk, _authErr)
         
     }
-    
     singOut = () => {
         const GoogleAuth = window.gapi.auth2.getAuthInstance()
         GoogleAuth.signOut().then(
             () => {
-            this.setState ({
-                name:null
-            })
+                this.setState({
+                    name: null,
+                })
         },
-            () => console.log('signOur ERR'))
+            () => console.log('signOut ERR'))
+    }
+    handlClickUser = () => {
+        const symbol1 = <span>&#x2228;</span> 
+        const symbol2 = <span>&#x2227;</span> 
+         this.setState({
+             user: this.state.user === 'user_false' ? 'user_true' : 'user_false' ,
+             symbol: this.state.user === 'user_false' ? symbol2 : symbol1
+         })
     }
     render(){
         const { name } = this.state
@@ -47,12 +57,23 @@ export default class PersonalArea  extends React.Component {
                 <div className = 'google_icon'></div>
               <p >Войти</p>
           </div>}
-          {name && <Link to = '/profile'><div className = 'personal_area'>
-          <div className = 'google_icon'></div>
-              <p >{name}</p>
-          </div></Link>}
+          {name && <div className = 'user_area' onClick = {this.handlClickUser}>
+              <div className = 'user_menu'><div className = 'user_icon'></div>{this.state.symbol}</div>
+              <div className = {this.state.user}>
+                    <div onClick = {this.singOut}><div className = 'logout' ></div >выйти</div>
+                    <div><Link to = '/basket'><div className = 'product_in_basket'></div>{this.props.lengthBasket} товар в карзине</Link></div>
+                    {/* <div><div className = 'chat_icon'></div>чат с тех поддержкой</div>
+                    <div><div className = 'star_icon'></div>избранное</div> */}
+              </div>
+          </div>}
              </div>
         )
     }
 }
-    
+const mapStateToProps = ({lengthBasket}) => {
+    return{
+        lengthBasket
+    }
+        
+}
+export default connect (mapStateToProps)(PersonalArea)
