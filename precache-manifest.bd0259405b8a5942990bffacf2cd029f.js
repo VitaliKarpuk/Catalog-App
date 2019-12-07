@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "17c9183a5ba3539e18ec62ca511cd814",
+    "revision": "4141e35e573be19b7f0aee2e7903fb3a",
     "url": "/Catalog-App/index.html"
   },
   {
-    "revision": "cbe0d5fde38a62073038",
+    "revision": "50482a75dfa5bf65622e",
     "url": "/Catalog-App/static/css/2.7ccd2839.chunk.css"
   },
   {
-    "revision": "8b29ca8f550f0b6ffba8",
-    "url": "/Catalog-App/static/css/main.c0135afd.chunk.css"
+    "revision": "0607562d790f4ca47b09",
+    "url": "/Catalog-App/static/css/main.767d40cc.chunk.css"
   },
   {
-    "revision": "cbe0d5fde38a62073038",
-    "url": "/Catalog-App/static/js/2.20461a32.chunk.js"
+    "revision": "50482a75dfa5bf65622e",
+    "url": "/Catalog-App/static/js/2.79ca3b16.chunk.js"
   },
   {
-    "revision": "8b29ca8f550f0b6ffba8",
-    "url": "/Catalog-App/static/js/main.5c1fa501.chunk.js"
+    "revision": "0607562d790f4ca47b09",
+    "url": "/Catalog-App/static/js/main.692b782f.chunk.js"
   },
   {
     "revision": "b0e5dad5f01900b5cbb4",
@@ -392,6 +392,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Catalog-App/static/media/car6.77fed81b.jpg"
   },
   {
+    "revision": "2212c63a1d3f2ea93469555615708f18",
+    "url": "/Catalog-App/static/media/chat_icon.2212c63a.ico"
+  },
+  {
     "revision": "6b7a472a22fbdbff4b2b08ddb4f43735",
     "url": "/Catalog-App/static/media/colorschememapping.6b7a472a.xml"
   },
@@ -456,6 +460,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Catalog-App/static/media/slick.f97e3bbf.svg"
   },
   {
+    "revision": "9fc6d2e220782a8bc413741a600dcb4b",
+    "url": "/Catalog-App/static/media/star_icon.9fc6d2e2.ico"
+  },
+  {
     "revision": "3c12528ed7aec745a489a1a4e42422f4",
     "url": "/Catalog-App/static/media/themedata.3c12528e.thmx"
   },
@@ -466,5 +474,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "255362e37e04f0565901f5d67333eca8",
     "url": "/Catalog-App/static/media/user.255362e3.svg"
+  },
+  {
+    "revision": "98b1d9e86646cdbe1bb41a5a1bfcad93",
+    "url": "/Catalog-App/static/media/user_icon.98b1d9e8.ico"
   }
 ]);
