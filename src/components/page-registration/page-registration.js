@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import './style.css'
 import { connect } from 'react-redux'
 import { totalOrder } from '../../actions/lengthBasket'
+import { returnState } from '../../actions/returnState'
 
 class PageRegistration extends Component {
   constructor(props) {
@@ -87,7 +88,7 @@ class PageRegistration extends Component {
              <div className = 'order-empty'>
                <Link to = '/'><h3>onlin<span>car</span></h3></Link>
                 <img src = {require (`../../img/truck.svg`)}  width = '90%' height = '90%' alt = 'car'/>
-                <p>Ваша корзина пуста. Перейдите в <Link to = 'catalog'>каталог</Link>  и добавьте товары.</p>
+                <p>Ваша корзина пуста. Перейдите в <Link to = 'catalog' onClick = { this.props.returnState}>каталог</Link>  и добавьте товары.</p>
              </div>:
             
             <div className = 'do-order'>
@@ -107,4 +108,4 @@ const mapStateToProps = (state) => {
     state
   )
 }
-export default connect (mapStateToProps, {totalOrder}) (PageRegistration)
+export default connect (mapStateToProps, {totalOrder, returnState}) (PageRegistration)
