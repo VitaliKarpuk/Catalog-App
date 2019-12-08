@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a33f87b51e11c5e791fc3aa4c0e0d0d5",
+    "revision": "15ff5a3ce373766b036394a588eaecd7",
     "url": "/Catalog-App/index.html"
   },
   {
-    "revision": "50482a75dfa5bf65622e",
+    "revision": "4b2c9f88d5f9e18488d8",
     "url": "/Catalog-App/static/css/2.7ccd2839.chunk.css"
   },
   {
-    "revision": "265c94ae7d70a6f88733",
-    "url": "/Catalog-App/static/css/main.f06c2df5.chunk.css"
+    "revision": "99c4d0e0f4f8b4d87261",
+    "url": "/Catalog-App/static/css/main.7028f392.chunk.css"
   },
   {
-    "revision": "50482a75dfa5bf65622e",
-    "url": "/Catalog-App/static/js/2.79ca3b16.chunk.js"
+    "revision": "4b2c9f88d5f9e18488d8",
+    "url": "/Catalog-App/static/js/2.bad78a88.chunk.js"
   },
   {
-    "revision": "265c94ae7d70a6f88733",
-    "url": "/Catalog-App/static/js/main.550852a2.chunk.js"
+    "revision": "99c4d0e0f4f8b4d87261",
+    "url": "/Catalog-App/static/js/main.a8fffe8c.chunk.js"
   },
   {
     "revision": "b0e5dad5f01900b5cbb4",
@@ -458,6 +458,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/Catalog-App/static/media/slick.f97e3bbf.svg"
+  },
+  {
+    "revision": "6ee7923096662a87217cc37c677774ca",
+    "url": "/Catalog-App/static/media/star_gold_icon.6ee79230.ico"
   },
   {
     "revision": "9fc6d2e220782a8bc413741a600dcb4b",
