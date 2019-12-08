@@ -62,8 +62,6 @@ class PersonalArea  extends React.Component {
               <div className = {this.state.user}>
                     <div onClick = {this.singOut}><div className = 'logout' ></div >выйти</div>
                     <div><Link to = '/basket'><div className = 'product_in_basket'></div>{this.props.lengthBasket} товар в карзине</Link></div>
-                    {/* <div><div className = 'chat_icon'></div>чат с тех поддержкой</div>
-                    <div><div className = 'star_icon'></div>избранное</div> */}
               </div>
           </div>}
              </div>

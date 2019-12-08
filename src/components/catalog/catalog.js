@@ -13,19 +13,28 @@ const Catalog = (props) => {
     const onChooseMark = (e) => {
         infoCar(e.target.className)
     }
-    const [ valueButton, setValueButton ] = useState('')
-    let car = []
-    const getCar = () => {
-        let arrCar = localStorage.getItem('car')
-        if(arrCar !== null){
-            car = JSON.parse(arrCar)
-        }
-        return car
+    // const [ valueButton, setValueButton ] = useState('')
+    const [ favoritesStar, setFavoritesStar ] = useState('fa-star-o')
+    // let car = []
+    // const getCar = () => {
+    //     let arrCar = localStorage.getItem('car')
+    //     if(arrCar !== null){
+    //         car = JSON.parse(arrCar)
+    //     }
+    //     return car
+    // }
+    // const addInBasket = (e) => {
+    //     setValueButton(document.getElementById(`${e.target.id}`).innerText = 'Перейти в корзину')
+    //     let car = getCar(listCar)
+    //     localStorage.setItem(`car`, JSON.stringify(car))
+    // }
+    const handlFavoritesStar = (e) => {
+        debugger
+        setFavoritesStar('fa-star')
     }
-    const addInBasket = (e) => {
-        setValueButton(document.getElementById(`${e.target.id}`).innerText = 'Перейти в корзину')
-        let car = getCar(listCar)
-        localStorage.setItem(`car`, JSON.stringify(car))
+    const handlNoFavoritesStar = (e) => {
+        debugger
+        setFavoritesStar('fa-star-o')
     }
     return(
         <div className = 'catalog_list'>
@@ -56,6 +65,12 @@ const Catalog = (props) => {
                                             <Link to = '/catalog/infocar'  onClick = { onChooseMark }>
                                                 <h5 className = {elem.model}>{elem.mark.toUpperCase()} {elem.model}</h5>
                                             </Link>
+                                            {/* {
+                                                favoritesStar === 'fa-star-o' ? 
+                                                <i className = "fa fa-star-o fa-2x" aria-hidden="true" onClick = {handlFavoritesStar}></i> :
+                                                <i className="fa fa-star fa-2x" aria-hidden="true" onClick = {handlNoFavoritesStar}></i>
+                                            } */}
+                                            
                                             {/* {valueButton === 'Перейти в корзину' ?
                                             <Link to = '/profile'>
                                                 <button id = {index}></button>

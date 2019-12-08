@@ -18,7 +18,7 @@ class PageRegistration extends Component {
     this.handleRemove = this.handleRemove.bind(this)
 }
   componentDidMount() {
-    const car = JSON.parse(localStorage.getItem('car'))
+    const car = JSON.parse(localStorage.getItem('car')) === null ? [] : JSON.parse(localStorage.getItem('car'))
     const arrPrice = []
     car.forEach(element => arrPrice.push(element[0].price) );
     let c = ''

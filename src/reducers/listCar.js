@@ -37,8 +37,8 @@ export const listCar = (state = data, action) => {
             return [...state].sort((a,b) => b.year - a.year)
         case ADD_CAR_IN_BASKET:
             return state.push(localStorage.setItem(`${state.model}`, state))
+        default:
+            return state
            
     }
-    
-    return state
 }

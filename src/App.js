@@ -11,6 +11,7 @@ import Basket  from './components/header/basket/basket'
 import PageRegistration from './components/page-registration/page-registration'
 
 export const App = () => {
+  
   return (
     <>
 
