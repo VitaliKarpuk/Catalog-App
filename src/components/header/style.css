@@ -228,6 +228,7 @@ a:hover{
     display: none !important;
 }
 @media screen and (max-width: 768px){
+    
     body{
         width: 100vw;
     }
@@ -351,5 +352,46 @@ a:hover{
     }
     .fa-list{
         display: none !important;
+    }
+    .nav_menu__catalog a:hover .menu_catalog {
+        left: 300px;
+        top: 0px;
+        width: 375px;
+    }
+    .menu_catalog a li {
+        height: 100%;
+    }
+    .result_search ul{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .result_search ul li{
+        display: flex;
+        flex-wrap: wrap;
+        width: 49%;
+        height: 380px;
+        margin-bottom: 10px !important;
+    }
+    .result_search ul li img {
+        height: 229px;
+        width: 281px;
+    }
+    .info_car {
+        height: 115px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .info_car__price{
+        width: 100% !important;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sort{
+        flex-wrap: nowrap !important;
+    }
+    .options_car {
+        width: 158px;
+        margin-left: 18px;
     }
 }
