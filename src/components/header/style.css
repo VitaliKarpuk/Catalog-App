@@ -224,7 +224,9 @@ a:hover{
 .fa-star:hover, .fa-star-o:hover{
     cursor: pointer;
 }
-
+.header > i.fa-search {
+    display: none !important;
+}
 @media screen and (max-width: 768px){
     .header_wrapper{
         width: 80% !important;
@@ -274,9 +276,7 @@ a:hover{
         height: 300px !important;
         z-index: 1;
     }
-    .fa-list{
-        display: none;
-    }
+
     .nav_menu__catalog > a > li {
         justify-content: flex-start;
         margin-left: 40px;
@@ -288,22 +288,26 @@ a:hover{
         order: 2;
     }
     .header_search{
-        order: 1;
-        width: 50px;
-        display: flex;
-        justify-content: center;
+        position: absolute;
+        left: -99999999em;
+    } 
+    .header .header_icon {
+        right: 17%;
+        justify-content: flex-end;
     }
     .header_basket{
         order: 3;
     }
-    .header_search a, .header_search input{
-        display: none;
-    }
+
     .header_icon{
         width: 100% !important;
     }
     .fa-search{
         font-size: xx-large !important;
+    }
+    .fa-search:hover .header_search input{
+        display: flex;
+        widows: 200px;
     }
     .header_logo {
         font-size: 50px;
@@ -314,5 +318,18 @@ a:hover{
     .mybasket, .google_icon {
         width: 50px;
         height: 50px;
+    }
+    .header > i.fa-search {
+        display: flex !important;
+    }
+    .header > i.fa-search:hover .header_search {
+        left: 100px;
+        top: 100px;
+    }
+    .content_info li {
+        width: 90% !important;
+    }
+    .content_info h5 {
+        margin-bottom: 20px !important;
     }
 }

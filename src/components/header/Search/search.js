@@ -17,7 +17,8 @@ const Search = (props) => {
         }
     }
     return(
-
+        <>
+            <i className="fa fa-search" aria-hidden="true" ></i>
             <form className = 'header_search' onSubmit = {findCar}>
                 <input type = 'text' placeholder = 'Поиск в каталоге. Например "bmw"' value = {valueInput} onChange = { onChangeValueInput } />
                 <div className = 'header_icon' >
@@ -27,7 +28,7 @@ const Search = (props) => {
                     <button type = "submit" onClick = {findCar}>Поиск</button>
                 </Link>
             </form>
-
+        </>
     )
 }
 const mapStateToProps = ({listCar}) => {
