@@ -439,10 +439,15 @@ a:hover{
         flex-direction: column;
     }
     .info_car_options button {
+        margin-left: 0;
         margin-bottom: 20px;
+        width: 100%;
     }
     .services {
         font-size: 0.7rem;
+    }
+    .car_in__basket{
+        width: 100% !important;
     }
     .car_in__basket img {
         width: 97px !important;
@@ -464,6 +469,12 @@ a:hover{
     }
     .info_car_basket > div:last-child h5 {
         font-size: 0.9rem;
+        height: 40px;
+        width: 75px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        margin: 0;
     }
     .remove_basket {
         font-size: 0.6rem;
@@ -477,5 +488,8 @@ a:hover{
     .do-order{
         flex-direction: column;
         height: 100% !important;
+    }
+    .remove_basket {
+        margin-right: 5px;
     }
 }
