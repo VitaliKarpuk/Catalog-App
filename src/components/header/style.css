@@ -228,6 +228,12 @@ a:hover{
     display: none !important;
 }
 @media screen and (max-width: 768px){
+    body{
+        width: 100vw;
+    }
+    .root{
+        width: 90vw;
+    }
     .header_wrapper{
         width: 80% !important;
         position: relative;
@@ -247,7 +253,7 @@ a:hover{
         flex-direction: column;
     }
     .nav_menu__catalog a {
-        height: 50px;
+        height: 115px;
         width: 100%;
         border-bottom: 1px solid rgb(196, 196, 196);
     }
@@ -264,6 +270,9 @@ a:hover{
         background-image: url(../../img/icon-menu.ico);
         background-size: 100% 100%;
     }
+    .nav_menu__catalog li span {
+        align-items: center;
+    }
     .nav_menu:hover .nav_menu__catalog{
         display: flex;
         opacity: 1;
@@ -274,13 +283,13 @@ a:hover{
         font-size: 1.5rem;
     }
     .nav_menu:hover{
-        height: 380px !important;
+        height: 600px !important;
         z-index: 1;
     }
-
     .nav_menu__catalog > a > li {
         justify-content: flex-start;
         margin-left: 40px;
+        height: 100%;
     }
     .header > div:last-child{
         order: 4;
@@ -307,9 +316,6 @@ a:hover{
 
     .header_icon{
         width: 100% !important;
-    }
-    .fa-search{
-        font-size: xx-large !important;
     }
     .fa-search:hover .header_search input{
         display: flex;
@@ -342,5 +348,8 @@ a:hover{
     }
     .content_info {
         font-size: 1.5rem;
+    }
+    .fa-list{
+        display: none !important;
     }
 }
