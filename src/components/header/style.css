@@ -267,13 +267,14 @@ a:hover{
     .nav_menu:hover .nav_menu__catalog{
         display: flex;
         opacity: 1;
-        width: 200px;
+        width: 300px;
         background-color: #ffffff;
         position: relative;
-        left: 15px;
+        left: 66px;
+        font-size: 1.5rem;
     }
     .nav_menu:hover{
-        height: 300px !important;
+        height: 380px !important;
         z-index: 1;
     }
 
@@ -284,13 +285,18 @@ a:hover{
     .header > div:last-child{
         order: 4;
     }
+    .header{
+        margin-bottom: 100px;
+    }
     .header > a{
         order: 2;
     }
-    .header_search{
+    .header_search {
         position: absolute;
-        left: -99999999em;
-    } 
+        left: -127px;
+        top: 108px;
+        width: 121%;
+    }
     .header .header_icon {
         right: 17%;
         justify-content: flex-end;
@@ -328,8 +334,13 @@ a:hover{
     }
     .content_info li {
         width: 90% !important;
+        font-size: 1.5rem;
     }
     .content_info h5 {
         margin-bottom: 20px !important;
+        font-size: 1.5rem;
+    }
+    .content_info {
+        font-size: 1.5rem;
     }
 }
