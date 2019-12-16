@@ -281,4 +281,38 @@ a:hover{
         justify-content: flex-start;
         margin-left: 40px;
     }
+    .header > div:last-child{
+        order: 4;
+    }
+    .header > a{
+        order: 2;
+    }
+    .header_search{
+        order: 1;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .header_basket{
+        order: 3;
+    }
+    .header_search a, .header_search input{
+        display: none;
+    }
+    .header_icon{
+        width: 100% !important;
+    }
+    .fa-search{
+        font-size: xx-large !important;
+    }
+    .header_logo {
+        font-size: 50px;
+    }
+    .header_basket p, .personal_area p {
+        font-size: 1.2rem;
+    }
+    .mybasket, .google_icon {
+        width: 50px;
+        height: 50px;
+    }
 }
