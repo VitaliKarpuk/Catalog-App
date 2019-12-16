@@ -492,4 +492,15 @@ a:hover{
     .remove_basket {
         margin-right: 5px;
     }
+    .faq {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .info_about__car > div > div > div:last-child ul {
+        padding-left: 25px;
+    }
 }
