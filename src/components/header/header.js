@@ -4,6 +4,7 @@ import PersonalArea from './personal-area/personal-area'
 import NavMenu from './nav-menu/nav-menu'
 import { Link } from 'react-router-dom'
 import Basket from './basket/basket'
+import { Favorites } from '../favorites/favorites'
 import './style.css'
 export const Header = () => {
     return(

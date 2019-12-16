@@ -2,7 +2,8 @@ import data from '../data'
 import { SEARCH_CAR, RETURN_STATE, INFO_CAR, SEARCH_NEW_CAR,
         SEARCH_CAR_MODEL, SEARCH_CAR_YEAR_START, SEARCH_CAR_YEAR_END,
         SEARCH_CAR_PRICE_START, SEARCH_CAR_PRICE_END, SEARCH_CAR_BODY,
-        SEARCH_CAR_FUEL, SORT_PRICE, SORT_YEAR, ADD_CAR_IN_BASKET, SORT_PRICE_MIN, SORT_YEAR_MIN } from '../constants/constants'
+        SEARCH_CAR_FUEL, SORT_PRICE, SORT_YEAR, ADD_CAR_IN_BASKET, SORT_PRICE_MIN, SORT_YEAR_MIN,
+        FAVORITES_CAR } from '../constants/constants'
 export const listCar = (state = data, action) => {
     switch (action.type) {
         case SEARCH_CAR:
@@ -37,6 +38,8 @@ export const listCar = (state = data, action) => {
             return [...state].sort((a,b) => b.year - a.year)
         case ADD_CAR_IN_BASKET:
             return state.push(localStorage.setItem(`${state.model}`, state))
+        case FAVORITES_CAR:
+            return state.filter( elem => elem.id === action.favorites ? action.favorites = 'fa-star' : 'fa-star-o')
         default:
             return state
            

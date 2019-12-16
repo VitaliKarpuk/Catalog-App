@@ -9,12 +9,12 @@ import { Services } from './components/services/services'
 import { Contact } from './components/contact/contact'
 import Basket  from './components/header/basket/basket'
 import PageRegistration from './components/page-registration/page-registration'
+import Favorites from './components/favorites/favorites'
 
 export const App = () => {
   
   return (
     <>
-
       <Header />
       <Route exact path = '/' component = { Content } />
       <Route exact path = '/catalog' component = { Catalog } />
@@ -23,6 +23,7 @@ export const App = () => {
       <Route path = '/contact' component = { Contact } />
       <Route path = '/basket' component = { PageRegistration } />
       <Route path = '/profile' component = {PageRegistration} />
+      <Route path = '/favorites' component = {Favorites} />
     </>
   )
 }

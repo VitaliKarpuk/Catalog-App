@@ -34,6 +34,7 @@ export const NavMenu = (props) => {
     return(
     <>
         <div className = 'nav_menu'>
+            <div className = 'icon_menu'></div>
             <ul className = 'nav_menu__catalog'>
                 <Link to = '/catalog'>
                     <li><i className="fa fa-list" aria-hidden="true" onClick = { onClickCatalog }></i> <span onClick = { onClickCatalog }>Каталог</span>

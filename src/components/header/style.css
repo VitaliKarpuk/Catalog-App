@@ -164,7 +164,7 @@ a:hover{
     justify-content: flex-start;
     flex-direction: column;
     width: 200px;
-    height: 100px;
+    height: 150px;
     background-color: #ffffff;
     position: absolute;
     top: 70px;
@@ -213,4 +213,72 @@ a:hover{
 }
 .user_menu:hover{
     cursor: pointer;
+}
+.product_in_favorites{
+    width: 20px;
+    margin-right: 5px;
+    height: 20px;
+    background-image: url(../../img/star_gold_icon.ico);
+    background-size: 100% 100%;
+}
+.fa-star:hover, .fa-star-o:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .header_wrapper{
+        width: 80% !important;
+        position: relative;
+        left: 169px;
+    }
+    .nav_menu{
+        width: 100px !important;
+        height: 50px !important;
+        position: absolute;
+        top: 28px;
+        left: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav_menu__catalog{
+        display: none;
+        flex-direction: column;
+    }
+    .nav_menu__catalog a {
+        height: 50px;
+        width: 100%;
+        border-bottom: 1px solid rgb(196, 196, 196);
+    }
+    .nav_menu__catalog a:last-child {
+        border: none;
+    }
+    .root{
+        flex-direction: row !important;
+    }
+    .icon_menu{
+        display: block;
+        width: 100px;
+        height: 50px;
+        background-image: url(../../img/icon-menu.ico);
+        background-size: 100% 100%;
+    }
+    .nav_menu:hover .nav_menu__catalog{
+        display: flex;
+        opacity: 1;
+        width: 200px;
+        background-color: #ffffff;
+        position: relative;
+        left: 15px;
+    }
+    .nav_menu:hover{
+        height: 300px !important;
+        z-index: 1;
+    }
+    .fa-list{
+        display: none;
+    }
+    .nav_menu__catalog > a > li {
+        justify-content: flex-start;
+        margin-left: 40px;
+    }
 }

@@ -55,13 +55,14 @@ class PersonalArea  extends React.Component {
             <div>
             {!name && <div className = 'personal_area' onClick = { this.singIn }>
                 <div className = 'google_icon'></div>
-              <p >Войти</p>
+                <p >Войти</p>
           </div>}
           {name && <div className = 'user_area' onClick = {this.handlClickUser}>
               <div className = 'user_menu'><div className = 'user_icon'></div>{this.state.symbol}</div>
               <div className = {this.state.user}>
-                    <div onClick = {this.singOut}><div className = 'logout' ></div >выйти</div>
-                    <div><Link to = '/basket'><div className = 'product_in_basket'></div>{this.props.lengthBasket} товар в карзине</Link></div>
+                <div onClick = {this.singOut}><div className = 'logout' ></div >выйти</div>
+                <div><Link to = '/basket'><div className = 'product_in_basket'></div>{this.props.lengthBasket} товар в карзине</Link></div>
+                <div><Link to = '/favorites'><div className = 'product_in_favorites'></div> избранные</Link></div>
               </div>
           </div>}
              </div>
