@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Catalog-App/static/css/main.7028f392.chunk.css",
-    "main.js": "/Catalog-App/static/js/main.a8fffe8c.chunk.js",
-    "main.js.map": "/Catalog-App/static/js/main.a8fffe8c.chunk.js.map",
+    "main.css": "/Catalog-App/static/css/main.4a59e6f0.chunk.css",
+    "main.js": "/Catalog-App/static/js/main.5466336a.chunk.js",
+    "main.js.map": "/Catalog-App/static/js/main.5466336a.chunk.js.map",
     "runtime-main.js": "/Catalog-App/static/js/runtime-main.81e5ccf8.js",
     "runtime-main.js.map": "/Catalog-App/static/js/runtime-main.81e5ccf8.js.map",
-    "static/css/2.7ccd2839.chunk.css": "/Catalog-App/static/css/2.7ccd2839.chunk.css",
-    "static/js/2.bad78a88.chunk.js": "/Catalog-App/static/js/2.bad78a88.chunk.js",
-    "static/js/2.bad78a88.chunk.js.map": "/Catalog-App/static/js/2.bad78a88.chunk.js.map",
+    "static/css/2.6a97d9cb.chunk.css": "/Catalog-App/static/css/2.6a97d9cb.chunk.css",
+    "static/js/2.fb06b1ce.chunk.js": "/Catalog-App/static/js/2.fb06b1ce.chunk.js",
+    "static/js/2.fb06b1ce.chunk.js.map": "/Catalog-App/static/js/2.fb06b1ce.chunk.js.map",
     "index.html": "/Catalog-App/index.html",
-    "precache-manifest.0fb43e310e4171b62ac99fa24c6021c1.js": "/Catalog-App/precache-manifest.0fb43e310e4171b62ac99fa24c6021c1.js",
+    "precache-manifest.d7b55e1a8529a9e70465cb5566cd1c28.js": "/Catalog-App/precache-manifest.d7b55e1a8529a9e70465cb5566cd1c28.js",
     "service-worker.js": "/Catalog-App/service-worker.js",
-    "static/css/2.7ccd2839.chunk.css.map": "/Catalog-App/static/css/2.7ccd2839.chunk.css.map",
-    "static/css/main.7028f392.chunk.css.map": "/Catalog-App/static/css/main.7028f392.chunk.css.map",
+    "static/css/2.6a97d9cb.chunk.css.map": "/Catalog-App/static/css/2.6a97d9cb.chunk.css.map",
+    "static/css/main.4a59e6f0.chunk.css.map": "/Catalog-App/static/css/main.4a59e6f0.chunk.css.map",
     "static/media/0.chunk.js.Без названия": "/Catalog-App/static/media/0.chunk.js.0af21e3e.Без названия",
     "static/media/1.00182eb7.jpeg": "/Catalog-App/static/media/1.00182eb7.00182eb7.jpeg",
     "static/media/1.jpeg": "/Catalog-App/static/media/1.fcddfde9.jpeg",
@@ -55,16 +55,15 @@
     "static/media/logo.svg": "/Catalog-App/static/media/logo.7b72927b.svg",
     "static/media/main.chunk.js.Без названия": "/Catalog-App/static/media/main.chunk.js.95d1e5d4.Без названия",
     "static/media/slick-theme.css": "/Catalog-App/static/media/slick.f97e3bbf.svg",
-    "static/media/star_gold_icon.ico": "/Catalog-App/static/media/star_gold_icon.6ee79230.ico",
     "static/media/themedata.thmx": "/Catalog-App/static/media/themedata.3c12528e.thmx",
     "static/media/truck.svg": "/Catalog-App/static/media/truck.5c693f56.svg",
     "static/media/user.svg": "/Catalog-App/static/media/user.255362e3.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.81e5ccf8.js",
-    "static/css/2.7ccd2839.chunk.css",
-    "static/js/2.bad78a88.chunk.js",
-    "static/css/main.7028f392.chunk.css",
-    "static/js/main.a8fffe8c.chunk.js"
+    "static/css/2.6a97d9cb.chunk.css",
+    "static/js/2.fb06b1ce.chunk.js",
+    "static/css/main.4a59e6f0.chunk.css",
+    "static/js/main.5466336a.chunk.js"
   ]
 }
