@@ -235,7 +235,7 @@ a:hover{
     #root{
         width: 90vw !important;
         min-width: 90vw !important;
-        background: radial-gradient(at top, rgb(235, 235, 235),white);
+        background: radial-gradient(at bottom, rgb(235, 235, 235),white);
     }
     .header_wrapper {
         width: 80% !important;
@@ -493,7 +493,7 @@ a:hover{
         margin-right: 5px;
     }
     .faq {
-        width: 100%;
+        width: 100% !important;
         display: flex;
         flex-direction: column;
         justify-content: center;
