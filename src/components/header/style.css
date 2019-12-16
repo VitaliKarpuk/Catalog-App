@@ -413,7 +413,7 @@ a:hover{
         padding: 14px;
     }
     .slick-slider {
-        width: 100%;
+        width: 100% !important;
     }
     .info_about__car > div {
         flex-direction: column;
