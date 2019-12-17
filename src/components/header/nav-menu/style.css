@@ -136,12 +136,23 @@
         padding-left: 10px;
         display: flex;
         align-items: center;
+        height: 80px;
+    }
+    .navbar-nav > a {
+        height: 80px;
     }
     .dropdown li {
         width: 100%;
     }
     .navbar-nav .dropdown-menu {
         padding: 0;
+        border: none;
+        margin: 0;
+        background-color: rgb(255, 247, 247);
+        font-size: 24px;
+    }
+    .navbar-nav .dropdown-menu  a {
+        color: rgb(53, 53, 53);
     }
     .dropdown a li {
         padding-left: 16px;
@@ -153,6 +164,7 @@
         display: flex;
         align-items: center;
         padding-left: 10px;
+        color: rgb(53, 53, 53);
     }
     .navbar-nav > a > div{
         width: 20px;
@@ -163,5 +175,8 @@
     .footer {
         height: 55px !important;
     }
-
+    .navbar-nav {
+        font-size: 28px;
+        background-color: rgb(247, 242, 242);
+    }
 }

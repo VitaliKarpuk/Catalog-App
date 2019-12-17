@@ -87,19 +87,19 @@ export const NavMenu = (props) => {
               aria-expanded="false">Каталог <span class="caret"></span></li>
             <ul class="dropdown-menu">
             <Link to = '/catalog' onClick = {onClickNewCar}>
-                <li>ВСЕ АТОМОБИЛИ</li>
+                <li>Все автомобили</li>
             </Link>
             <Link to = '/catalog/newcar' onClick = {onClickNewCar}>
-                <li>АВТОМОБИЛИ С САЛОНА</li>
+                <li>Автомобили с салона</li>
             </Link>
             <Link to = '/catalog/oldcar' onClick = { onClickOldCar }>
-                <li>АВТОМОБИЛИ С ПРОБЕГОМ</li>
+                <li>Автомобили с пробегом</li>
             </Link>
             <Link to = '/catalog/truck' onClick = { onClickTruck }>
-                <li>ГРУЗОВОЙ ТРАНСПОРТ</li>
+                <li>Грузовой транспорт</li>
             </Link>
             <Link to = '/catalog/bus' onClick = { onClickBus } >
-                <li>АВТОБУСЫ</li>
+                <li>Автобусы</li>
             </Link>
             </ul>
           </li>
