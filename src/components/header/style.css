@@ -233,67 +233,18 @@ a:hover{
         width: 100vw;
     }
     #root{
-        width: 90vw !important;
-        min-width: 90vw !important;
+        width: 100% !important;
+        min-width: 100vw !important;
         background: radial-gradient(at bottom, rgb(235, 235, 235),white);
+        flex-direction: row !important;
     }
     .header_wrapper {
         width: 80% !important;
         position: relative;
         left: 20%;
     }
-    .nav_menu{
-        width: 30px !important;
-        height: 30px !important;
-        position: absolute;
-        top: 28px;
-        left: 40px;
-        display: flex;
-        flex-direction: column;
-    }
-    .nav_menu__catalog{
-        display: none;
-        flex-direction: column;
-    }
-    .nav_menu__catalog a {
-        height: 25%;
-        width: 100%;
-        border-bottom: 1px solid rgb(196, 196, 196);
-    }
-    .nav_menu__catalog a:last-child {
-        border: none;
-    }
-    .root{
-        flex-direction: row !important;
-    }
-    .icon_menu{
-        display: block;
-        width: 100%;
-        height: 50px;
-        background-image: url(../../img/icon-menu.ico);
-        background-size: 100% 100%;
-    }
-    .nav_menu__catalog li span {
-        align-items: center;
-    }
-    .nav_menu:hover .nav_menu__catalog{
-        display: flex;
-        opacity: 1;
-        width: 120px;
-        background-color: #ffffff;
-        position: relative;
-        left: 20px;
-        font-size: 1rem;
-        height: 290px;
-    }
-    .nav_menu:hover{
-        height: 320px !important;
-        z-index: 1;
-    }
-    .nav_menu__catalog > a > li {
-        justify-content: flex-start;
-        margin-left: 5px;
-        height: 100%;
+    .slick-prev, .slick-next {
+        display: none !important;
     }
     .header > div:last-child{
         order: 4;
@@ -341,7 +292,7 @@ a:hover{
         margin-top: 25px !important;
     }
     .content_info li {
-        width: 90% !important;
+        width: 98% !important;
         font-size: 0.7rem;
         box-shadow: 0 3px 10px 0 rgba(51,51,51,.2);
         padding: 5px;

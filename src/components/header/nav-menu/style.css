@@ -89,6 +89,79 @@
 .menu_catalog a:first-child{
     border-top: 1px solid #e5e5e5;
 }
-.icon_menu{
+
+.navbar-default{
     display: none;
+}
+@media screen and (max-width: 768px){
+    .navbar-default{
+        display: flex;
+    }
+    #iconMenu{
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+        border: none;
+        background-image: url(../../../img//icon-menu.ico);
+        background-size: 100% 100%;
+        outline: none;
+        margin-left: 15px;
+    }
+    #xMenu{
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+        border: none;
+        background-image: url(../../../img/icon_x.ico);
+        background-size: 100% 100%;
+        outline: none;
+        margin-left: 15px;
+    }
+    .nav_menu{
+        display: none;
+    }
+    .navbar {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        padding: 0;
+        z-index: 5;
+    }
+    .navbar-collapse {
+        background-color: #ffffff;
+        width: 100vw;
+    }
+    .navbar-nav > a > li, .dropdown-toggle{
+        height: 50px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .dropdown li {
+        width: 100%;
+    }
+    .navbar-nav .dropdown-menu {
+        padding: 0;
+    }
+    .dropdown a li {
+        padding-left: 16px;
+    }
+    .navbar>.container, .navbar>.container-fluid {
+        padding: 0;
+    }
+    .navbar-nav > a {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .navbar-nav > a > div{
+        width: 20px;
+        height: 20px;
+        background-image: url(../../../img/icon_service.ico);
+        background-size: 100% 100%;
+    }
+    .footer {
+        height: 55px !important;
+    }
+
 }

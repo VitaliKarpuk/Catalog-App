@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, Link } from 'react-router-dom'
 import { CatalogNewCar } from '../../catalog/catalog_new'
 import { CatalogOldCar } from '../../catalog/catalog_oldcar'
@@ -12,6 +12,7 @@ import InfoAboutCar from '../../infoAboutCar/infoAboutCar'
 import { searchNewcar } from '../../../actions/searchNewCar'
 export const NavMenu = (props) => {
     const { returnState, searchNewcar } = props
+    const [ idMenu, setIdMenu ] = useState('iconMenu')
     const onClickCatalog = () =>{
         returnState()
     }
@@ -30,6 +31,10 @@ export const NavMenu = (props) => {
     const onClickBus = () => {
         returnState()
         searchNewcar('Автобус')
+    }
+    const handleMenu = () => {
+        idMenu === 'iconMenu' ? setIdMenu('xMenu') : setIdMenu('iconMenu')
+        
     }
     return(
     <>
@@ -65,6 +70,69 @@ export const NavMenu = (props) => {
                 </Link>
             </ul>
         </div>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" onClick = {handleMenu}  id = {idMenu} class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <li class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Каталог <span class="caret"></span></li>
+            <ul class="dropdown-menu">
+            <Link to = '/catalog' onClick = {onClickNewCar}>
+                <li>ВСЕ АТОМОБИЛИ</li>
+            </Link>
+            <Link to = '/catalog/newcar' onClick = {onClickNewCar}>
+                <li>АВТОМОБИЛИ С САЛОНА</li>
+            </Link>
+            <Link to = '/catalog/oldcar' onClick = { onClickOldCar }>
+                <li>АВТОМОБИЛИ С ПРОБЕГОМ</li>
+            </Link>
+            <Link to = '/catalog/truck' onClick = { onClickTruck }>
+                <li>ГРУЗОВОЙ ТРАНСПОРТ</li>
+            </Link>
+            <Link to = '/catalog/bus' onClick = { onClickBus } >
+                <li>АВТОБУСЫ</li>
+            </Link>
+            </ul>
+          </li>
+          <Link to = '/services'>
+                <div className = 'menu_services'></div>
+                <li>Услуги</li>
+            </Link>
+            <Link to = '/about'>
+            <div className = 'aboutUs'></div>
+                <li>О компании</li>
+            </Link>
+            <Link to = '/contact'>
+            <div className = 'contact'></div>
+                <li>FAQ</li>
+            </Link>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <Route path = '/catalog/newcar' component = {CatalogNewCar} />
     <Route path = '/catalog/oldcar' component = {CatalogOldCar} />
     <Route path = '/catalog/truck' component = {CatalogTruck} />
