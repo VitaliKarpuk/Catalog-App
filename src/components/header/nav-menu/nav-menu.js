@@ -13,28 +13,38 @@ import { searchNewcar } from '../../../actions/searchNewCar'
 export const NavMenu = (props) => {
     const { returnState, searchNewcar } = props
     const [ idMenu, setIdMenu ] = useState('iconMenu')
+    const [ classNavbar, setClassNavbar ] = useState('collapse navbar-collapse')
     const onClickCatalog = () =>{
         returnState()
+        handleClass()
     }
     const onClickNewCar = () => {
         returnState()
         searchNewcar('Новый автомобиль')
+        handleClass()
     }
     const onClickOldCar = () => {
         returnState()
         searchNewcar('Автомобиль с пробегом')
+        handleClass()
     }
     const onClickTruck = () => {
         returnState()
         searchNewcar('Грузовой транспорт')
+        handleClass()
     }
     const onClickBus = () => {
         returnState()
         searchNewcar('Автобус')
+        handleClass()
     }
     const handleMenu = () => {
-        idMenu === 'iconMenu' ? setIdMenu('xMenu') : setIdMenu('iconMenu')
-        
+            idMenu === 'iconMenu' ? setIdMenu('xMenu') : setIdMenu('iconMenu')
+            idMenu === 'iconMenu' ? setClassNavbar('collapse navbar-collapse show') : setClassNavbar('collapse navbar-collapse')   
+    }
+    const handleClass = () => {
+        setClassNavbar('collapse navbar-collapse')
+        classNavbar === 'collapse navbar-collapse' ? setIdMenu('xMenu') : setIdMenu('iconMenu')
     }
     return(
     <>
@@ -59,7 +69,7 @@ export const NavMenu = (props) => {
                         </ul>
                     </li>
                 </Link>
-                <Link to = '/services'>
+                <Link to = '/services' >
                     <li>Услуги</li>
                 </Link>
                 <Link to = '/about'>
@@ -73,20 +83,14 @@ export const NavMenu = (props) => {
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" onClick = {handleMenu}  id = {idMenu} class="navbar-toggle collapsed" data-toggle="collapse"
-          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-
-        </button>
-      </div>
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <li class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-              aria-expanded="false">Каталог <span class="caret"></span></li>
-            <ul class="dropdown-menu">
-            <Link to = '/catalog' onClick = {onClickNewCar}>
+        <div id = {idMenu} onClick = {handleMenu} ></div>
+      <div className={classNavbar} id="bs-example-navbar-collapse-1">
+        <ul className="nav navbar-nav">
+          <li className="dropdown">
+            <li className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false"><div></div> Каталог <span class="caret"></span></li>
+            <ul className="dropdown-menu">
+            <Link to = '/catalog' onClick = {onClickCatalog}>
                 <li>Все автомобили</li>
             </Link>
             <Link to = '/catalog/newcar' onClick = {onClickNewCar}>
@@ -103,15 +107,15 @@ export const NavMenu = (props) => {
             </Link>
             </ul>
           </li>
-          <Link to = '/services'>
+          <Link to = '/services' onClick = {handleClass}>
                 <div className = 'menu_services'></div>
                 <li>Услуги</li>
             </Link>
-            <Link to = '/about'>
+            <Link to = '/about' onClick = {handleClass}>
             <div className = 'aboutUs'></div>
                 <li>О компании</li>
             </Link>
-            <Link to = '/contact'>
+            <Link to = '/contact' onClick = {handleClass}>
             <div className = 'contact'></div>
                 <li>FAQ</li>
             </Link>

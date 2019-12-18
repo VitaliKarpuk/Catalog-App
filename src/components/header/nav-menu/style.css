@@ -98,8 +98,8 @@
         display: flex;
     }
     #iconMenu{
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
         background-color: #ffffff;
         border: none;
         background-image: url(../../../img//icon-menu.ico);
@@ -108,8 +108,8 @@
         margin-left: 15px;
     }
     #xMenu{
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
         background-color: #ffffff;
         border: none;
         background-image: url(../../../img/icon_x.ico);
@@ -122,7 +122,7 @@
     }
     .navbar {
         position: absolute;
-        top: 27px;
+        top: 37px;
         left: 0;
         padding: 0;
         z-index: 5;
@@ -155,7 +155,7 @@
         color: rgb(53, 53, 53);
     }
     .dropdown a li {
-        padding-left: 16px;
+        padding-left: 50px;
     }
     .navbar>.container, .navbar>.container-fluid {
         padding: 0;
@@ -169,8 +169,16 @@
     .navbar-nav > a > div{
         width: 20px;
         height: 20px;
-        background-image: url(../../../img/icon_service.ico);
         background-size: 100% 100%;
+    }
+    .navbar-nav > a:nth-child(2) > div{
+        background-image: url(../../../img/icon_service.ico);
+    }
+    .navbar-nav > a:nth-child(3) > div{
+        background-image: url(../../../img/icon_about.ico);
+    }
+    .navbar-nav > a:nth-child(4) > div{
+        background-image: url(../../../img/icon_questions.ico);
     }
     .footer {
         height: 55px !important;
@@ -178,5 +186,12 @@
     .navbar-nav {
         font-size: 28px;
         background-color: rgb(247, 242, 242);
+    }
+    .dropdown  li > div{
+        width: 20px;
+        height: 20px;
+        background-image: url(../../../img/icon-menu.ico);
+        background-size: 100% 100%;
+        margin-right: 10px;
     }
 }
