@@ -383,6 +383,7 @@ a:hover{
     }
     .info_about__car > div > div p {
         margin-top: 20px;
+        padding-left: 10px;
     }
     .info_car_options {
         width: 100%;
@@ -457,5 +458,8 @@ a:hover{
     .info_car__price h5, .info_car__price h6{
         font-size: 1.5rem;
         padding: 10px;
+    }
+    .info_about__car > div > div > div:last-child h6 {
+        padding-left: 10px;
     }
 }
