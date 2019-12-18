@@ -143,6 +143,7 @@
     }
     .dropdown li {
         width: 100%;
+        color: rgb(78, 78, 78);
     }
     .navbar-nav .dropdown-menu {
         padding: 0;

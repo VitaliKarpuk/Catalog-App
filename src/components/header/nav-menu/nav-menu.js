@@ -16,35 +16,37 @@ export const NavMenu = (props) => {
     const [ classNavbar, setClassNavbar ] = useState('collapse navbar-collapse')
     const onClickCatalog = () =>{
         returnState()
-        handleClass()
+        setTimeout(() => handleClass(), 300)
     }
     const onClickNewCar = () => {
         returnState()
         searchNewcar('Новый автомобиль')
-        handleClass()
+        setTimeout(() => handleClass(), 300)
     }
     const onClickOldCar = () => {
         returnState()
         searchNewcar('Автомобиль с пробегом')
-        handleClass()
+        setTimeout(() => handleClass(), 300)
     }
     const onClickTruck = () => {
         returnState()
         searchNewcar('Грузовой транспорт')
-        handleClass()
+        setTimeout(() => handleClass(), 300)
     }
     const onClickBus = () => {
         returnState()
         searchNewcar('Автобус')
-        handleClass()
+        setTimeout(() => handleClass(), 300)   
     }
     const handleMenu = () => {
             idMenu === 'iconMenu' ? setIdMenu('xMenu') : setIdMenu('iconMenu')
             idMenu === 'iconMenu' ? setClassNavbar('collapse navbar-collapse show') : setClassNavbar('collapse navbar-collapse')   
     }
     const handleClass = () => {
-        setClassNavbar('collapse navbar-collapse')
-        classNavbar === 'collapse navbar-collapse' ? setIdMenu('xMenu') : setIdMenu('iconMenu')
+        setTimeout(() =>{
+            setClassNavbar('collapse navbar-collapse')
+            classNavbar === 'collapse navbar-collapse' ? setIdMenu('xMenu') : setIdMenu('iconMenu')
+        }, 300)
     }
     return(
     <>
@@ -86,10 +88,10 @@ export const NavMenu = (props) => {
         <div id = {idMenu} onClick = {handleMenu} ></div>
       <div className={classNavbar} id="bs-example-navbar-collapse-1">
         <ul className="nav navbar-nav">
-          <li className="dropdown">
+          <li className='dropdown' >
             <li className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
               aria-expanded="false"><div></div> Каталог <span class="caret"></span></li>
-            <ul className="dropdown-menu">
+            <ul className='dropdown-menu'>
             <Link to = '/catalog' onClick = {onClickCatalog}>
                 <li>Все автомобили</li>
             </Link>
