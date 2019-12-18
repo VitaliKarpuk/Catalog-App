@@ -351,7 +351,7 @@ a:hover{
     .info_car__price{
         width: 100% !important;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .sort{
         flex-wrap: nowrap !important;
@@ -360,7 +360,7 @@ a:hover{
         width: 100%;
     }
     .order-empty {
-        width: 100% !important;
+        width: 88% !important;
         padding: 14px;
     }
     .slick-slider {
@@ -453,5 +453,9 @@ a:hover{
     }
     .info_about__car > div > div > div:last-child ul {
         padding-left: 25px;
+    }
+    .info_car__price h5, .info_car__price h6{
+        font-size: 1.5rem;
+        padding: 10px;
     }
 }

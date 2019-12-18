@@ -88,7 +88,7 @@ class PageRegistration extends Component {
              <div className = 'order-empty'>
                <Link to = '/'><h3>onlin<span>car</span></h3></Link>
                 <img src = {require (`../../img/truck.svg`)}  width = '90%' height = '90%' alt = 'car'/>
-                <p>Ваша корзина пуста. Перейдите в <Link to = 'catalog' onClick = { this.props.returnState}>каталог</Link>  и добавьте товары.</p>
+                <p>Ваша корзина пуста. Перейдите в <Link to = 'catalog' onClick = { this.props.returnState}> каталог</Link>  и добавьте товары.</p>
              </div>:
             
             <div className = 'do-order'>

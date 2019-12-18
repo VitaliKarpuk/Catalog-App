@@ -11,8 +11,9 @@ import { sortYearMin } from '../../actions/sortYearMin'
 import { favoritesCar } from '../../actions/favoritesCar'
 const Catalog = (props) => {
     const { listCar, infoCar, sortPrice, sortYear, sortPriceMin, sortYearMin, favoritesCar } = props
-    const onChooseMark = (e) => {       
+    const onChooseMark = (e) => {     
         infoCar(e.target.className)
+        console.log(e.target.className)
     }
     let arrfav = []
 
@@ -49,7 +50,9 @@ const Catalog = (props) => {
                 <ul>
                     { listCar.map((elem, index) =>{
                         return <li key = {index} className = {`${elem.model}`}>
-                                    <img src = {require (`../../img/${elem.img[0]}`)}  width = '100%' height = '100%' alt = 'car'/>
+                                    <Link to = '/catalog/infocar'  onClick = { onChooseMark }>
+                                        <img className = {elem.model} src = {require (`../../img/${elem.img[0]}`)}  width = '100%' height = '100%' alt = 'car'/>
+                                    </Link>
                                     <div className = 'info_car'>
                                         <div className = 'info_car__price'>
                                             <h6>{elem.year}</h6>
