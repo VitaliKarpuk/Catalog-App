@@ -164,7 +164,7 @@
         display: flex;
         align-items: center;
         padding-left: 10px;
-        color: rgb(53, 53, 53);
+        color: rgb(78, 78, 78);
     }
     .navbar-nav > a > div{
         width: 20px;
@@ -193,5 +193,11 @@
         background-image: url(../../../img/icon-menu.ico);
         background-size: 100% 100%;
         margin-right: 10px;
+    }
+    .dropdown-menu a li:hover{
+        color: rgb(214, 59, 59);
+    }
+    .navbar-nav > a:hover {
+        color: rgb(214, 59, 59);
     }
 }
