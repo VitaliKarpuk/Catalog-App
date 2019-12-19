@@ -9,7 +9,7 @@
     text-align: start;
 }
 @media screen and (max-width: 768px){
-    .services p{
-        padding-left: 10px;
+    .services > p{
+        padding-left: 15px;
     }
 }
