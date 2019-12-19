@@ -44,7 +44,7 @@ export const Contact = () => {
     return(
         <ul className = 'faq'>
             {faq.map((item, index) => <li className = {`faqLi_${index}`} >{item.question}
-            <div className = {`listFaq_${index}`}>{item.answer}</div>
+            <div className = {`listFaq_${index}`}><p>{item.answer}</p></div>
             </li>)}
         </ul>
     )
