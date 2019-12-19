@@ -228,4 +228,7 @@
         justify-content: center;
         margin: 0;
     }
+    .info_car > div p {
+        margin-bottom: 30px;
+    }
 }
