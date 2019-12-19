@@ -341,7 +341,7 @@ a:hover{
     }
     .result_search ul li img {
         height: 229px;
-        width: 281px;
+        width: 311px;
     }
     .info_car {
         height: 115px;
@@ -351,7 +351,7 @@ a:hover{
     .info_car__price{
         width: 100% !important;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
     }
     .sort{
         flex-wrap: nowrap !important;
@@ -457,9 +457,11 @@ a:hover{
     }
     .info_car__price h5, .info_car__price h6{
         font-size: 1.5rem;
-        padding: 10px;
     }
     .info_about__car > div > div > div:last-child h6 {
         padding-left: 10px;
+    }
+    .info_car__price h5{
+        margin-left: 10px;
     }
 }

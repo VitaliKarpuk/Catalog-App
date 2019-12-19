@@ -11,8 +11,14 @@
 }
 @media screen and (max-width: 768px){
     #footer{
-        height: 90px ;
+        height: 55px ;
         font-size: 0.7rem;
+    }
+    #footer p{
+        margin: 0;
+    }
+    .info_car > div:last-child > div a{
+        position: relative;
     }
     
 }
