@@ -194,3 +194,37 @@
 .fa-star{
     color: gold;
 }
+@media screen and (max-width: 768px){
+    .result_search > div{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        height: 40px;
+    }
+    .result_search > div > div{
+        height: 100%;
+        width: 100%;
+    }
+    .result_search > div > p{
+        display: none;
+    }
+    .sort {
+        width: 100% !important;
+        height: 100%;
+        margin: 0 !important;
+    }
+    .sort li {
+        margin: 0;
+        width: 25% !important;
+        background-color: rgb(216, 123, 123);
+        color: #ffffff;
+        font-size: 0.7rem;
+        opacity: 0.8;
+    }
+    .sort li span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
