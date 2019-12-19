@@ -5,3 +5,11 @@
     padding: 15px;
     text-align: justify;
 }
+.services h3{
+    text-align: start;
+}
+@media screen and (max-width: 768px){
+    .services p{
+        padding-left: 10px;
+    }
+}
