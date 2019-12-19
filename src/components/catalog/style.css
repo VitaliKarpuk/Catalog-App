@@ -201,6 +201,7 @@
         width: 100%;
         margin: 0;
         height: 40px;
+        z-index: 1;
     }
     .result_search > div > div{
         height: 100%;
