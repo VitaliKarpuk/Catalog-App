@@ -63,7 +63,7 @@ const Catalog = (props) => {
                                                 <Link to = '/catalog/infocar'  onClick = { onChooseMark }>
                                                     <h5 className = {elem.model}>{elem.mark.toUpperCase()} {elem.model}</h5>
                                                 </Link>
-                                             <i className = {`fa ${elem.favorites} fa-2x`} onClick = {handlFavoritesStar}></i>
+                                             {/* {localStorage.getItem('name') !== null ? console.log(localStorage.getItem('name').length) : <i className = {`fa ${elem.favorites} fa-2x`}></i>} */}
                                             </div>
                                             <p>{elem.use}, {elem.fuel.toLowerCase()}, {elem.body.toLowerCase()}, {elem.drive_unit.toLowerCase()}</p>
                                             <p>{elem.keywords}</p>
