@@ -5,7 +5,8 @@ class PersonalArea  extends React.Component {
     state = {
         name: null,
         user: 'user_false',
-        symbol: <span>&#x2228;</span>
+        symbol: <span>&#x2228;</span>,
+        imgUrl: null
     }
     componentDidMount() {
         window.gapi.load('auth2', function() {
@@ -15,21 +16,19 @@ class PersonalArea  extends React.Component {
             }).then(() => console.log('init OK'), () => console.log('init ERR'))
         });
     }
+
     singIn = () => {
-        const _authOk = (user) => {
-            this.setState ({
-                name:user.getBasicProfile().getName()
-            })           
-        }
-        const _authErr = () => {
-            console.log('Auth ERR')
-        }
-        const GoogleAuth = window.gapi.auth2.getAuthInstance()
-        GoogleAuth.signIn({
-            scope: 'profile email'
-        }).then(_authOk, _authErr)
-        
-    }
+        const auth2 = window.gapi.auth2.getAuthInstance()
+        auth2.signIn().then(googleUser => {
+          const profile = googleUser.getBasicProfile()
+
+          this.setState({
+            name: profile.getName(),
+            imgUrl: profile.getImageUrl(),
+          })
+        })
+      }
+
     singOut = () => {
         const GoogleAuth = window.gapi.auth2.getAuthInstance()
         GoogleAuth.signOut().then(
@@ -48,6 +47,7 @@ class PersonalArea  extends React.Component {
              symbol: this.state.user === 'user_false' ? symbol2 : symbol1
          })
     }
+    
     render(){
         const { name } = this.state
         localStorage.setItem('name', name)
@@ -58,7 +58,9 @@ class PersonalArea  extends React.Component {
                 <p >Войти</p>
           </div>}
           {name && <div className = 'user_area' onClick = {this.handlClickUser}>
-              <div className = 'user_menu'><div className = 'user_icon'></div>{this.state.symbol}</div>
+              <div className = 'user_menu'>
+
+                  <img src = {this.state.imgUrl} width = '100%' alt = 'Fhoto'/></div>
               <div className = {this.state.user}>
                 <div onClick = {this.singOut}><div className = 'logout' ></div >выйти</div>
                 <div><Link to = '/basket'><div className = 'product_in_basket'></div>{this.props.lengthBasket} товар в карзине</Link></div>

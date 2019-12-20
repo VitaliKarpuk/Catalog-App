@@ -152,6 +152,9 @@ a:hover{
     width: 60px;
     align-items: center;
 }
+.user_menu img{
+    border-radius: 50%;
+}
 .user_menu span{
     color: rgb(83, 82, 82);
     margin-left: 5px;
