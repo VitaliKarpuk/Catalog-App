@@ -50,15 +50,25 @@
 .fa-search{
     color: rgb(134, 134, 134);
 }
-.header_basket, .personal_area{
+.header_basket {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 52px;
+}
+.personal_area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 75px;
+    height: 52px;
 }
 .header_basket a{
     text-align: center;
     color: black;
+    height: 100%;
 }
 .header_basket p, .personal_area p {
     margin: 0;
@@ -127,8 +137,12 @@ a:hover{
 }
 .google_icon{
     width: 35px;
-    height: 35px;
-    background-image: url(../../img/google_icon.ico);
+    height: 52px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-image: url(/static/media/google_icon.38a82e56.ico);
     background-size: 100% 100%;
 }
 .user_icon{
@@ -149,8 +163,11 @@ a:hover{
 }
 .user_menu {
     display: flex;
-    width: 50px;
+    width: 75px;
     align-items: center;
+}
+.user_menu i{
+    margin-left: 5px;
 }
 .user_menu img{
     border-radius: 50%;
@@ -279,7 +296,11 @@ a:hover{
     .header_basket p, .personal_area p {
         font-size: 0.7rem;
     }
-    .mybasket, .google_icon {
+    .mybasket{
+        width: 30px;
+        height: 30px;
+    }
+    .google_icon {
         width: 30px;
         height: 30px;
     }

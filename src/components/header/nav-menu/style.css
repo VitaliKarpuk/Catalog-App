@@ -72,7 +72,7 @@
 
 .nav_menu__catalog a:hover .menu_catalog {
     opacity: 1;
-    left: 7%;
+    left: 0;
     top: 100%;
 }
 .menu_catalog a{
@@ -150,13 +150,17 @@
         border: none;
         margin: 0;
         background-color: rgb(255, 247, 247);
-        font-size: 24px;
+        font-size: 1.1rem;
     }
     .navbar-nav .dropdown-menu  a {
         color: rgb(53, 53, 53);
     }
+    .dropdown-toggle{
+        box-shadow: 20px 0 20px -20px rgb(139, 84, 84) inset, -20px 0 20px -20px #000 inset;
+    }
     .dropdown a li {
-        padding-left: 50px;
+        padding: 10px 0 10px 30px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, .8), 23px 0 20px -23px rgba(0, 0, 0, .8), 0 0 40px rgba(0, 0, 0, .1) inset;
     }
     .navbar>.container, .navbar>.container-fluid {
         padding: 0;
@@ -166,6 +170,7 @@
         align-items: center;
         padding-left: 10px;
         color: rgb(78, 78, 78);
+        box-shadow: 20px 0 20px -20px rgb(139, 84, 84) inset, -20px 0 20px -20px #000 inset;
     }
     .navbar-nav > a > div{
         width: 20px;
@@ -185,7 +190,7 @@
         height: 55px !important;
     }
     .navbar-nav {
-        font-size: 28px;
+        font-size: 1.1rem;
         background-color: rgb(247, 242, 242);
     }
     .dropdown  li > div{

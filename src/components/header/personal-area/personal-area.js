@@ -5,7 +5,7 @@ class PersonalArea  extends React.Component {
     state = {
         name: null,
         user: 'user_false',
-        symbol: <span>&#x2228;</span>,
+        symbol: <i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i>,
         imgUrl: null
     }
     componentDidMount() {
@@ -40,8 +40,8 @@ class PersonalArea  extends React.Component {
             () => console.log('signOut ERR'))
     }
     handlClickUser = () => {
-        const symbol1 = <span>&#x2228;</span> 
-        const symbol2 = <span>&#x2227;</span> 
+        const symbol1 = <i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i>
+        const symbol2 = <i class="fa fa-sort-asc fa-2x" aria-hidden="true"></i>
          this.setState({
              user: this.state.user === 'user_false' ? 'user_true' : 'user_false' ,
              symbol: this.state.user === 'user_false' ? symbol2 : symbol1
@@ -54,13 +54,19 @@ class PersonalArea  extends React.Component {
         return(
             <div>
             {!name && <div className = 'personal_area' onClick = { this.singIn }>
-                <div className = 'google_icon'></div>
+                <div className = 'google_icon'>
+                    
+                </div>
                 <p >Войти</p>
           </div>}
           {name && <div className = 'user_area' onClick = {this.handlClickUser}>
               <div className = 'user_menu'>
 
-                  <img src = {this.state.imgUrl} width = '100%' alt = 'Fhoto'/></div>
+                  <img src = {this.state.imgUrl} width = '50px' alt = 'Fhoto'/>
+                  {this.state.symbol}  
+                </div>
+                
+                  
               <div className = {this.state.user}>
                 <div onClick = {this.singOut}><div className = 'logout' ></div >выйти</div>
                 <div><Link to = '/basket'><div className = 'product_in_basket'></div>{this.props.lengthBasket} товар в карзине</Link></div>
