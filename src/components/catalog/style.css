@@ -194,6 +194,25 @@
 .fa-star{
     color: gold;
 }
+.buttonTop{
+    position: fixed;
+    bottom:10px;
+    right:10px;
+    background: none;
+    border: none;
+}
+.buttonTop:hover{
+    background: none !important;
+    border: none;
+}
+.buttonTop:hover .fa-arrow-circle-up{
+    color: rgb(175, 124, 124);
+    opacity: 1;
+}
+.fa-arrow-circle-up{
+    color: rgb(184, 156, 156);
+    opacity: 0.7;
+}
 @media screen and (max-width: 768px){
     .result_search > div{
         position: fixed;

@@ -156,7 +156,7 @@
         color: rgb(53, 53, 53);
     }
     .dropdown-toggle{
-        box-shadow: 20px 0 20px -20px rgb(139, 84, 84) inset, -20px 0 20px -20px #000 inset;
+        box-shadow: 20px 0 20px -20px rgb(139, 84, 84) inset, -20px 0 20px -20px rgb(139, 84, 84) inset;
     }
     .dropdown a li {
         padding: 10px 0 10px 30px;
@@ -170,7 +170,7 @@
         align-items: center;
         padding-left: 10px;
         color: rgb(78, 78, 78);
-        box-shadow: 20px 0 20px -20px rgb(139, 84, 84) inset, -20px 0 20px -20px #000 inset;
+        box-shadow: 20px 0 20px -20px rgb(139, 84, 84) inset, -20px 0 20px -20px rgb(139, 84, 84) inset;
     }
     .navbar-nav > a > div{
         width: 20px;

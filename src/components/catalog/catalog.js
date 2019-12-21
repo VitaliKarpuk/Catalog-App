@@ -32,6 +32,24 @@ const Catalog = (props) => {
         console.log(arrfav)
         localStorage.setItem('fav', JSON.stringify(arrfav))
     }
+    let scroll;
+    let timer;
+    const handleTop = () => {
+        scroll = window.pageYOffset
+        scrolled() 
+    }
+    const scrolled = () => {
+        if(scroll > 0) {
+            window.scrollTo(0, scroll)
+            scroll = scroll - 50
+            timer = setTimeout(scrolled, 10)
+        }
+        else{
+            clearTimeout(timer)
+            window.scrollTo(0,0)
+        }
+        }
+
     return(
         <div className = 'catalog_list'>
             <SearchByParameters/>
@@ -48,6 +66,7 @@ const Catalog = (props) => {
                     </div>
                 </div>
                 <ul>
+                    <button className = 'buttonTop' onClick = {handleTop}><i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i></button>
                     { listCar.map((elem, index) =>{
                         return <li key = {index} className = {`${elem.model}`}>
                                     <Link to = '/catalog/infocar'  onClick = { onChooseMark }>
